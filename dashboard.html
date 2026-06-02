@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbital Alpha | Space Technical Stock Analysis</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js CDN for interactive stock charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Dashboard Header -->
+        <header>
+            <div class="header-title-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
+                    </svg>
+                </div>
+                <div class="title-desc">
+                    <h1>Orbital Alpha</h1>
+                    <p>Advanced Space & Aerospace Technical Analysis Intelligence</p>
+                </div>
+            </div>
+            
+            <div class="last-updated-badge">
+                <div class="pulse-dot"></div>
+                <span>Last Trading Day: <strong id="last-updated-date">Loading...</strong></span>
+            </div>
+        </header>
+        
+        <!-- Sector Report Selector Tabs -->
+        <div class="report-tabs-bar">
+            <button class="report-tab active" id="tab-space">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
+                </svg>
+                Orbital Alpha (Space)
+            </button>
+            <button class="report-tab" id="tab-quantum">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/>
+                </svg>
+                Quantum Mechanics
+            </button>
+            <button class="report-tab" id="tab-shorts">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M12 8v4"/>
+                    <path d="M12 16h.01"/>
+                </svg>
+                Apex Shorts
+            </button>
+            <button class="report-tab" id="tab-performance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"/>
+                    <line x1="12" y1="20" x2="12" y2="4"/>
+                    <line x1="6" y1="20" x2="6" y2="14"/>
+                </svg>
+                Performance Audit
+            </button>
+        </div>
+
+        <!-- Technical Score Overview Stats -->
+        <section class="quick-overview-bar">
+            <!-- Total Listed -->
+            <div class="overview-card">
+                <div class="overview-icon-container total">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                </div>
+                <div class="overview-info">
+                    <h4>Total Analyzed</h4>
+                    <div class="value" id="stat-total">0</div>
+                </div>
+            </div>
+            
+            <!-- Buys -->
+            <div class="overview-card">
+                <div class="overview-icon-container buy">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                </div>
+                <div class="overview-info">
+                    <h4>Buy Candidates</h4>
+                    <div class="value" id="stat-buys" style="color: var(--color-buy);">0</div>
+                </div>
+            </div>
+
+            <!-- Holds -->
+            <div class="overview-card">
+                <div class="overview-icon-container hold">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+                    </svg>
+                </div>
+                <div class="overview-info">
+                    <h4>Neutral / Holds</h4>
+                    <div class="value" id="stat-holds" style="color: var(--color-hold);">0</div>
+                </div>
+            </div>
+
+            <!-- Sells -->
+            <div class="overview-card">
+                <div class="overview-icon-container sell">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 17h8m0 0v-8m0 8l-8-8-4 4-6-6" />
+                    </svg>
+                </div>
+                <div class="overview-info">
+                    <h4>Sell Candidates</h4>
+                    <div class="value" id="stat-sells" style="color: var(--color-sell);">0</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters & Search Controls -->
+        <section class="controls-bar">
+            <!-- Filter Pills -->
+            <div class="filters-group" id="filter-container">
+                <button class="filter-btn active" data-filter="all">All Sectors</button>
+                <button class="filter-btn" data-filter="Pure Play">Pure Plays</button>
+                <button class="filter-btn" data-filter="Defense Giant">Defense Giants</button>
+                <button class="filter-btn" data-filter="Aerospace Supplier">Suppliers</button>
+                <button class="filter-btn" data-signal="BUY">
+                    <span class="signal-dot buy"></span> Buys
+                </button>
+                <button class="filter-btn" data-signal="HOLD">
+                    <span class="signal-dot hold"></span> Holds
+                </button>
+                <button class="filter-btn" data-signal="SELL">
+                    <span class="signal-dot sell"></span> Sells
+                </button>
+            </div>
+
+            <!-- Search and Sorting -->
+            <div class="search-sort-group">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search ticker or name...">
+                </div>
+
+                <div class="sort-dropdown">
+                    <select id="sort-select">
+                        <option value="score-desc">Sort: Technical Rating (High-Low)</option>
+                        <option value="score-asc">Sort: Technical Rating (Low-High)</option>
+                        <option value="return-desc">Sort: Daily Change (High-Low)</option>
+                        <option value="return-asc">Sort: Daily Change (Low-High)</option>
+                        <option value="ticker-asc">Sort: Ticker (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Stock Grid -->
+        <main class="stock-grid" id="stock-grid-container">
+            <!-- Cards will be populated dynamically via JavaScript -->
+            <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+                Initializing orbital calculations and fetching market signals...
+            </div>
+        </main>
+
+        <!-- Apex Shorts Grid Section (Hidden by Default) -->
+        <main id="shorts-grid-container" style="display: none;">
+            <div class="shorts-split-layout">
+                <!-- Speculative Bracket ($1 - $10) -->
+                <div class="shorts-column-bracket">
+                    <div class="shorts-bracket-header bracket-speculative">
+                        <div class="bracket-badge">Speculative Cap</div>
+                        <h3>Micro-Cap Setup List ($1 to $10)</h3>
+                        <p>High-volatility stocks with extreme upper Bollinger Band deviations and squeeze potential</p>
+                    </div>
+                    <div class="shorts-cards-list" id="shorts-list-speculative">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Mid-Tier Bracket ($11 - $20) -->
+                <div class="shorts-column-bracket">
+                    <div class="shorts-bracket-header bracket-midtier">
+                        <div class="bracket-badge">Mid-Tier Cap</div>
+                        <h3>Mid-Tier Setup List ($11 to $20)</h3>
+                        <p>Structural overextensions with active catalysts and high institutional backing</p>
+                    </div>
+                    <div class="shorts-cards-list" id="shorts-list-midtier">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- High-Beta Bracket ($21 - $50) -->
+                <div class="shorts-column-bracket">
+                    <div class="shorts-bracket-header bracket-highbeta">
+                        <div class="bracket-badge">High-Beta Cap</div>
+                        <h3>High-Beta Setup List ($21 to $50)</h3>
+                        <p>Large-cap and high-beta candidates with strong structural resistance and macro headwinds</p>
+                    </div>
+                    <div class="shorts-cards-list" id="shorts-list-highbeta">
+                        <!-- Loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Performance Audit Grid Section (Hidden by Default) -->
+        <main id="performance-grid-container" style="display: none;">
+            <!-- Scheduler Status Dashboard -->
+            <div style="background: rgba(124, 77, 255, 0.05); border: 1px solid var(--color-primary-glow); border-radius: 20px; padding: 24px; margin-bottom: 30px; backdrop-filter: blur(12px);">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                    <div>
+                        <div style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--color-cyan); background: rgba(0, 245, 255, 0.1); border: 1px solid rgba(0, 245, 255, 0.2); padding: 4px 10px; border-radius: 6px; margin-bottom: 8px;">
+                            <span style="width: 6px; height: 6px; background-color: var(--color-cyan); border-radius: 50%; display: inline-block; animation: pulse 2s infinite;"></span>
+                            Windows Automation Active
+                        </div>
+                        <h3 class="outfit-font" style="font-size: 1.4rem; color: #ffffff;">4-Times-a-Day Institutional Scheduler</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px; line-height: 1.4;">
+                            Updates automatically at high-visibility market inflection points: <strong>8:30 AM EST (Pre-Open)</strong>, <strong>12:00 PM EST (Mid-Day)</strong>, <strong>3:15 PM EST (Power Hour)</strong>, and <strong>4:30 PM EST (Post-Market Close)</strong>.
+                        </p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-color); border-radius: 12px; padding: 12px 18px; text-align: center; min-width: 180px;">
+                        <span style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); display: block; letter-spacing: 0.5px;">Last Performance Audit</span>
+                        <strong id="audit-timestamp" style="font-size: 1.1rem; color: #ffffff; display: block; margin-top: 4px; font-family: 'Outfit', sans-serif;">Completed Successfully</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Historical Recommendations Table -->
+            <div class="shorts-column-bracket" style="margin-top: 20px;">
+                <div class="shorts-bracket-header" style="background: rgba(18, 20, 43, 0.6); border-bottom: 1px solid var(--border-color);">
+                    <div class="bracket-badge" style="background: rgba(0, 230, 118, 0.15); color: var(--color-buy); border: 1px solid rgba(0, 230, 118, 0.25);">Audit Database</div>
+                    <h3>Simulated Recommendation Ledger (Backtest Tracking)</h3>
+                    <p>Matches past technical BUY/SHORT signals against subsequent price action to audit win rate and accuracy</p>
+                </div>
+                <div style="padding: 20px; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;" id="performance-table">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--border-color); color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <th style="padding: 12px 10px;">Asset</th>
+                                <th style="padding: 12px 10px; text-align: center;">Signal</th>
+                                <th style="padding: 12px 10px; text-align: center;">Entry Date</th>
+                                <th style="padding: 12px 10px; text-align: right;">Entry Price</th>
+                                <th style="padding: 12px 10px; text-align: right;">Exit Target</th>
+                                <th style="padding: 12px 10px; text-align: center;">Exit Date</th>
+                                <th style="padding: 12px 10px; text-align: right;">Exit Price</th>
+                                <th style="padding: 12px 10px; text-align: center;">Outcome</th>
+                                <th style="padding: 12px 10px; text-align: right;">Return</th>
+                            </tr>
+                        </thead>
+                        <tbody id="performance-tbody" style="font-size: 0.85rem; color: var(--text-primary);">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Dashboard Footer -->
+        <footer style="margin-top: 50px; padding: 20px 0; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted);">
+            <div>Consensus Engine © 2026</div>
+            <div>Published: <strong id="publication-timestamp" style="color: var(--color-cyan);">Loading...</strong></div>
+        </footer>
+    </div>
+
+    <!-- Slide-over Technical Details Modal -->
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-panel">
+            <div class="modal-header">
+                <h3 class="outfit-font" style="font-size: 1.2rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px;">Technical Intelligence Report</h3>
+                <button class="close-btn" id="close-modal-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body" id="modal-body-content">
+                <!-- Data populated dynamically in app.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="data_quantum.js"></script>
+    <script src="performance.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

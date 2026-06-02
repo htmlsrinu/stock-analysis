@@ -1,0 +1,11 @@
+# Local configuration and credentials
+credentials.json
+
+# Local scheduler logs
+scheduler_history.log
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
