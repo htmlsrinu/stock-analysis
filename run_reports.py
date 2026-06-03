@@ -44,6 +44,9 @@ def git_push_updates():
             log("INFO: Git repository not initialized. Skipping Git push.")
             return False
 
+        # Pull first to resolve any remote conflicts automatically
+        subprocess.run(["git", "pull", "origin", "main", "--rebase"], cwd=CWD, check=True)
+
         # Add data files to staging
         subprocess.run(["git", "add", "data.js", "data_quantum.js", "performance.js"], cwd=CWD, check=True)
         
