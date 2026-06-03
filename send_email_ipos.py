@@ -191,10 +191,11 @@ def build_html_report(data):
                         <tr>
                             <th>Asset</th>
                             <th>Sector</th>
-                            <th style="text-align: right;">IPO Price</th>
+                            <th style="text-align: right;">IPO Price (Date)</th>
                             <th style="text-align: right;">Current</th>
                             <th style="text-align: right;">Change</th>
-                            <th style="text-align: right;">Low/High Range</th>
+                            <th style="text-align: right;">52W Low (Date)</th>
+                            <th style="text-align: right;">52W High (Date)</th>
                             <th style="text-align: center;">Consensus</th>
                         </tr>
                     </thead>
@@ -220,21 +221,29 @@ def build_html_report(data):
                                 <span class="ticker">{s.get('ticker')}</span>
                                 <span class="company-name">{s.get('name')}</span>
                             </td>
-                            <td style="padding: 12px 10px; color:#495057;">{s.get('sector')}</td>
-                            <td style="padding: 12px 10px; text-align: right; font-weight: 500;">${s.get('ipo_price', 0.0):.2f}</td>
-                            <td style="padding: 12px 10px; text-align: right; font-weight: 600; color:#1a1c23;">${s.get('price', 0.0):.2f}</td>
-                            <td style="padding: 12px 10px; text-align: right;" class="price-change {change_class}">
+                            <td style="padding: 12px 10px; color:#495057; vertical-align: middle;">{s.get('sector')}</td>
+                            <td style="padding: 12px 10px; text-align: right;">
+                                <strong style="color:#1a1c23;">${s.get('ipo_price', 0.0):.2f}</strong>
+                                <span style="font-size:10px; color:#868e96; display:block; margin-top:2px;">{s.get('ipo_date')}</span>
+                            </td>
+                            <td style="padding: 12px 10px; text-align: right; font-weight: 600; color:#1a1c23; vertical-align: middle;">${s.get('price', 0.0):.2f}</td>
+                            <td style="padding: 12px 10px; text-align: right; vertical-align: middle;" class="price-change {change_class}">
                                 {change_sign}{change:.2f}%
                             </td>
-                            <td style="padding: 12px 10px; text-align: right; font-family: monospace; font-size:11.5px; color:#0b7285;">
-                                ${low_52:.2f} - ${high_52:.2f}
+                            <td style="padding: 12px 10px; text-align: right;">
+                                <strong style="color:#dc3545;">${low_52:.2f}</strong>
+                                <span style="font-size:10px; color:#868e96; display:block; margin-top:2px;">{s.get('low_52w_date')}</span>
                             </td>
-                            <td style="padding: 12px 10px; text-align: center;">
+                            <td style="padding: 12px 10px; text-align: right;">
+                                <strong style="color:#28a745;">${high_52:.2f}</strong>
+                                <span style="font-size:10px; color:#868e96; display:block; margin-top:2px;">{s.get('high_52w_date')}</span>
+                            </td>
+                            <td style="padding: 12px 10px; text-align: center; vertical-align: middle;">
                                 <span class="signal-badge {sig_class}">{sig}</span>
                             </td>
                         </tr>
                         <tr style="background-color: #f8f9fa;">
-                            <td colspan="7" style="padding: 6px 12px; font-size: 11px; border-bottom: 1px solid #dee2e6; color: #495057;">
+                            <td colspan="8" style="padding: 6px 12px; font-size: 11px; border-bottom: 1px solid #dee2e6; color: #495057;">
                                 <strong style="color: #7c4dff;">News Catalyst:</strong> {famous_news}
                             </td>
                         </tr>

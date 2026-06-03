@@ -51,6 +51,8 @@ def main():
             # Calculate 52-week equivalent metrics (since IPO is < 52 weeks, these are max/min since IPO)
             high_52w = float(high.max())
             low_52w = float(low.min())
+            high_52w_date = high.idxmax().strftime('%Y-%m-%d')
+            low_52w_date = low.idxmin().strftime('%Y-%m-%d')
             avg_volume = float(df['Volume'].mean())
             
             # Retrieve sector and news safely
@@ -295,7 +297,9 @@ def main():
                 'change': float(close.iloc[-1] - close.iloc[-2]) if len(df) >= 2 else 0.0,
                 'changePercent': float(df['Daily_Return'].iloc[-1]) if len(df) >= 2 and not pd.isna(df['Daily_Return'].iloc[-1]) else 0.0,
                 'high_52w': high_52w,
+                'high_52w_date': high_52w_date,
                 'low_52w': low_52w,
+                'low_52w_date': low_52w_date,
                 'avg_volume': avg_volume,
                 'sector': sector,
                 'famous_news': news_headline,

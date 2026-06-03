@@ -1357,13 +1357,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span style="color: var(--text-secondary); font-size: 0.75rem; display: block; margin-top: 2px;">${ipo.name}</span>
                 </td>
                 <td style="padding: 12px 10px; vertical-align: middle; color: var(--text-secondary);">${ipo.sector}</td>
-                <td style="padding: 12px 10px; text-align: right; vertical-align: middle; font-weight: 600;">$${ipo.ipo_price.toFixed(2)}</td>
+                <td style="padding: 12px 10px; text-align: right; vertical-align: middle;">
+                    <strong style="color:#ffffff;">$${ipo.ipo_price.toFixed(2)}</strong>
+                    <span style="color: var(--text-secondary); font-size: 0.72rem; display: block; margin-top: 2px;">${ipo.ipo_date}</span>
+                </td>
                 <td style="padding: 12px 10px; text-align: right; vertical-align: middle; font-weight: 700; color: #ffffff;">$${ipo.price.toFixed(2)}</td>
                 <td style="padding: 12px 10px; text-align: right; vertical-align: middle; color: ${changeBadgeColor}; font-weight: 600;">
                     ${isPositive ? '+' : ''}${ipo.changePercent.toFixed(2)}%
                 </td>
-                <td style="padding: 12px 10px; text-align: right; vertical-align: middle; font-family: monospace; font-size: 0.8rem; color: var(--color-cyan);">
-                    $${ipo.low_52w.toFixed(2)} - $${ipo.high_52w.toFixed(2)}
+                <td style="padding: 12px 10px; text-align: right; vertical-align: middle;">
+                    <strong style="color: #ff5252;">$${ipo.low_52w.toFixed(2)}</strong>
+                    <span style="color: var(--text-secondary); font-size: 0.72rem; display: block; margin-top: 2px;">${ipo.low_52w_date}</span>
+                </td>
+                <td style="padding: 12px 10px; text-align: right; vertical-align: middle;">
+                    <strong style="color: #00e5ff;">$${ipo.high_52w.toFixed(2)}</strong>
+                    <span style="color: var(--text-secondary); font-size: 0.72rem; display: block; margin-top: 2px;">${ipo.high_52w_date}</span>
                 </td>
                 <td style="padding: 12px 10px; text-align: right; vertical-align: middle; color: var(--text-secondary);">${Math.round(ipo.avg_volume).toLocaleString()}</td>
                 <td style="padding: 12px 10px; text-align: center; vertical-align: middle;">${consensusBadge}</td>
