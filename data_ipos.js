@@ -20,6 +20,20 @@ window.IPO_DATA = {
       "high": 241.69000244140625,
       "low": 217.0,
       "volume": 5192900,
+      "shortAnalysis": {
+        "shortPercent": 5.5,
+        "sharesShort": 1899096,
+        "daysToCover": 0.08,
+        "squeezeRisk": "LOW",
+        "instPercent": 8.69,
+        "instSupport": "LOW",
+        "majorBacking": "Venture Backed / Strategic Partners",
+        "hasBigNews": "YES - Catalyst Active",
+        "latestHeadline": "Anthropic's IPO is Just Ahead. Here's What You Need to Know.",
+        "recommendedCover": 175.56,
+        "shortStopLoss": 282.24,
+        "percentAboveBB": -27.7
+      },
       "indicators": {
         "RSI": {
           "value": 35.532294366863965,
@@ -250,6 +264,20 @@ window.IPO_DATA = {
       "high": 38.369998931884766,
       "low": 35.06999969482422,
       "volume": 2019100,
+      "shortAnalysis": {
+        "shortPercent": 0.0,
+        "sharesShort": 2826230,
+        "daysToCover": 0.16,
+        "squeezeRisk": "LOW",
+        "instPercent": 18.28,
+        "instSupport": "LOW",
+        "majorBacking": "None Identified",
+        "hasBigNews": "YES - Catalyst Active",
+        "latestHeadline": "A Hot IPO Lifts Geothermal Power Companies",
+        "recommendedCover": 33.67,
+        "shortStopLoss": 40.6,
+        "percentAboveBB": -11.1
+      },
       "indicators": {
         "RSI": {
           "value": 50.01200637994765,
@@ -493,6 +521,20 @@ window.IPO_DATA = {
       "high": 24.899999618530273,
       "low": 23.040000915527344,
       "volume": 414200,
+      "shortAnalysis": {
+        "shortPercent": 0.0,
+        "sharesShort": 0,
+        "daysToCover": 0.0,
+        "squeezeRisk": "LOW",
+        "instPercent": 0.0,
+        "instSupport": "LOW",
+        "majorBacking": "None Identified",
+        "hasBigNews": "YES - Catalyst Active",
+        "latestHeadline": "Assessing Lincoln International (LCLN) Valuation After Recent Share Price Weakness",
+        "recommendedCover": 23.02,
+        "shortStopLoss": 25.59,
+        "percentAboveBB": -1.7
+      },
       "indicators": {
         "RSI": {
           "value": 67.59143099161551,
@@ -671,6 +713,20 @@ window.IPO_DATA = {
       "high": 22.09000015258789,
       "low": 21.3799991607666,
       "volume": 595100,
+      "shortAnalysis": {
+        "shortPercent": 0.0,
+        "sharesShort": 509328,
+        "daysToCover": 0.08,
+        "squeezeRisk": "LOW",
+        "instPercent": 10.41,
+        "instSupport": "LOW",
+        "majorBacking": "None Identified",
+        "hasBigNews": "YES - Catalyst Active",
+        "latestHeadline": "Blackstone Digital Infrastructure Trust IPO Opens Access To Hyperscale Data Centers",
+        "recommendedCover": 20.33,
+        "shortStopLoss": 23.07,
+        "percentAboveBB": -5.5
+      },
       "indicators": {
         "RSI": {
           "value": 64.21476398823704,
@@ -901,6 +957,20 @@ window.IPO_DATA = {
       "high": 5.539999961853027,
       "low": 3.5399999618530273,
       "volume": 1995400,
+      "shortAnalysis": {
+        "shortPercent": 0.0,
+        "sharesShort": 0,
+        "daysToCover": 0.0,
+        "squeezeRisk": "LOW",
+        "instPercent": 0.0,
+        "instSupport": "LOW",
+        "majorBacking": "None Identified",
+        "hasBigNews": "NO - Quiet Session",
+        "latestHeadline": "No recent headlines.",
+        "recommendedCover": 3.54,
+        "shortStopLoss": 7.04,
+        "percentAboveBB": -2.4
+      },
       "indicators": {
         "RSI": {
           "value": 74.22235164394696,
@@ -1118,6 +1188,20 @@ window.IPO_DATA = {
       "high": 32.380001068115234,
       "low": 28.829999923706055,
       "volume": 945800,
+      "shortAnalysis": {
+        "shortPercent": 1.38,
+        "sharesShort": 1268837,
+        "daysToCover": 0.37,
+        "squeezeRisk": "LOW",
+        "instPercent": 35.08,
+        "instSupport": "MODERATE",
+        "majorBacking": "Venture Backed / Strategic Partners",
+        "hasBigNews": "YES - Catalyst Active",
+        "latestHeadline": "Dear Future Applied Aerospace & Defense Stock Investors, Mark Your Calendars for June 3",
+        "recommendedCover": 26.24,
+        "shortStopLoss": 31.75,
+        "percentAboveBB": -16.2
+      },
       "indicators": {
         "RSI": {
           "value": 37.34395651804806,
@@ -1413,6 +1497,20 @@ window.IPO_DATA = {
       "high": 18.600000381469727,
       "low": 16.329999923706055,
       "volume": 451200,
+      "shortAnalysis": {
+        "shortPercent": 0.21,
+        "sharesShort": 86503,
+        "daysToCover": 0.11,
+        "squeezeRisk": "LOW",
+        "instPercent": 38.4,
+        "instSupport": "MODERATE",
+        "majorBacking": "None Identified",
+        "hasBigNews": "YES - Catalyst Active",
+        "latestHeadline": "Healthcare IPOs Raise $4.7 Billion As Odyssey, Mobia Debuts Slip",
+        "recommendedCover": 16.07,
+        "shortStopLoss": 17.57,
+        "percentAboveBB": -6.9
+      },
       "indicators": {
         "RSI": {
           "value": 48.098253630639775,
@@ -1695,6 +1793,20 @@ window.IPO_DATA = {
       "high": 14.640000343322754,
       "low": 12.800000190734863,
       "volume": 150800,
+      "shortAnalysis": {
+        "shortPercent": 3.16,
+        "sharesShort": 346370,
+        "daysToCover": 0.35,
+        "squeezeRisk": "LOW",
+        "instPercent": 35.68,
+        "instSupport": "MODERATE",
+        "majorBacking": "None Identified",
+        "hasBigNews": "NO - Quiet Session",
+        "latestHeadline": "No recent headlines.",
+        "recommendedCover": 9.97,
+        "shortStopLoss": 15.01,
+        "percentAboveBB": -31.0
+      },
       "indicators": {
         "RSI": {
           "value": 26.954807770196368,
@@ -1990,6 +2102,20 @@ window.IPO_DATA = {
       "high": 24.989999771118164,
       "low": 20.049999237060547,
       "volume": 510200,
+      "shortAnalysis": {
+        "shortPercent": 0.0,
+        "sharesShort": 0,
+        "daysToCover": 0.0,
+        "squeezeRisk": "LOW",
+        "instPercent": 0.0,
+        "instSupport": "LOW",
+        "majorBacking": "Venture Backed / Strategic Partners",
+        "hasBigNews": "NO - Quiet Session",
+        "latestHeadline": "No recent headlines.",
+        "recommendedCover": 13.3,
+        "shortStopLoss": 25.58,
+        "percentAboveBB": -38.2
+      },
       "indicators": {
         "RSI": {
           "value": 6.3389182052755615,
