@@ -62,6 +62,12 @@
                 </svg>
                 Performance Audit
             </button>
+            <button class="report-tab" id="tab-ipos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                Recent IPOs
+            </button>
         </div>
 
         <!-- Technical Score Overview Stats -->
@@ -259,6 +265,37 @@
                 </div>
             </div>
         </main>
+
+        <!-- Recent IPOs Grid Section (Hidden by Default) -->
+        <main id="ipos-grid-container" style="display: none;">
+            <div class="shorts-column-bracket" style="width: 100%;">
+                <div class="shorts-bracket-header" style="background: rgba(124, 77, 255, 0.08); border-bottom: 1px solid var(--border-color);">
+                    <div class="bracket-badge" style="background: rgba(0, 245, 255, 0.15); color: var(--color-cyan); border: 1px solid rgba(0, 245, 255, 0.25);">60-Day Debut List</div>
+                    <h3>Recent IPO Technical Performance (Last 60 Days)</h3>
+                    <p>Scans new market listings, calculates support levels, and evaluates buy/hold recommendations using our consensus engine models.</p>
+                </div>
+                <div style="padding: 20px; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 800px;" id="ipos-table">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--border-color); color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">
+                                <th style="padding: 12px 10px;">Asset / Ticker</th>
+                                <th style="padding: 12px 10px;">Sector</th>
+                                <th style="padding: 12px 10px; text-align: right;">IPO Price</th>
+                                <th style="padding: 12px 10px; text-align: right;">Current Price</th>
+                                <th style="padding: 12px 10px; text-align: right;">Daily Change</th>
+                                <th style="padding: 12px 10px; text-align: right;">Low / High (Since IPO)</th>
+                                <th style="padding: 12px 10px; text-align: right;">Avg Volume</th>
+                                <th style="padding: 12px 10px; text-align: center;">Consensus</th>
+                                <th style="padding: 12px 10px;">Famous Recent News</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ipos-tbody" style="font-size: 0.85rem; color: var(--text-primary);">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
         
         <!-- Dashboard Footer -->
         <footer style="margin-top: 50px; padding: 20px 0; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted);">
@@ -289,6 +326,7 @@
     <script src="data.js"></script>
     <script src="data_quantum.js"></script>
     <script src="performance.js"></script>
+    <script src="data_ipos.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

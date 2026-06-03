@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const stockGrid = document.getElementById('stock-grid-container');
         const shortsGrid = document.getElementById('shorts-grid-container');
         const performanceGrid = document.getElementById('performance-grid-container');
+        const iposGrid = document.getElementById('ipos-grid-container');
         const controlsBar = document.querySelector('.controls-bar');
         
         if (name === 'shorts') {
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (stockGrid) stockGrid.style.display = 'none';
             if (shortsGrid) shortsGrid.style.display = 'block';
             if (performanceGrid) performanceGrid.style.display = 'none';
+            if (iposGrid) iposGrid.style.display = 'none';
             if (controlsBar) controlsBar.style.display = 'none';
             
             // Update title and subtitle
@@ -63,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (stockGrid) stockGrid.style.display = 'none';
             if (shortsGrid) shortsGrid.style.display = 'none';
             if (performanceGrid) performanceGrid.style.display = 'block';
+            if (iposGrid) iposGrid.style.display = 'none';
             if (controlsBar) controlsBar.style.display = 'none';
             
             // Update title and subtitle
@@ -85,12 +88,43 @@ document.addEventListener('DOMContentLoaded', () => {
             populatePerformanceStats();
             renderPerformanceGrid();
             return;
+        } else if (name === 'ipos') {
+            const tabIpos = document.getElementById('tab-ipos');
+            if (tabIpos) tabIpos.classList.add('active');
+            
+            if (stockGrid) stockGrid.style.display = 'none';
+            if (shortsGrid) shortsGrid.style.display = 'none';
+            if (performanceGrid) performanceGrid.style.display = 'none';
+            if (iposGrid) iposGrid.style.display = 'block';
+            if (controlsBar) controlsBar.style.display = 'none';
+            
+            // Update title and subtitle
+            document.querySelector('.title-desc h1').textContent = "Recent IPOs";
+            document.querySelector('.title-desc p').textContent = "Quantitative Technical Performance & Consensus Ratings for New Listings";
+            
+            // Set last updated date in UI
+            let iposLastUpdated = '2026-06-01';
+            if (window.IPO_DATA) {
+                iposLastUpdated = window.IPO_DATA.lastUpdated;
+            }
+            document.getElementById('last-updated-date').textContent = iposLastUpdated;
+            
+            // Update publication timestamp with current date and time
+            const now = new Date();
+            const formattedTime = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+            const timestampEl = document.getElementById('publication-timestamp');
+            if (timestampEl) timestampEl.textContent = formattedTime;
+            
+            populateIposStats();
+            renderIposTable();
+            return;
         }
         
         // Restore standard view grid and controls
         if (stockGrid) stockGrid.style.display = 'grid';
         if (shortsGrid) shortsGrid.style.display = 'none';
         if (performanceGrid) performanceGrid.style.display = 'none';
+        if (iposGrid) iposGrid.style.display = 'none';
         if (controlsBar) controlsBar.style.display = 'flex';
         
         // Restore standard overview stats labels
@@ -207,10 +241,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabQuantum = document.getElementById('tab-quantum');
     const tabShorts = document.getElementById('tab-shorts');
     const tabPerf = document.getElementById('tab-performance');
+    const tabIpos = document.getElementById('tab-ipos');
     if (tabSpace) tabSpace.addEventListener('click', () => loadDataset('space'));
     if (tabQuantum) tabQuantum.addEventListener('click', () => loadDataset('quantum'));
     if (tabShorts) tabShorts.addEventListener('click', () => loadDataset('shorts'));
     if (tabPerf) tabPerf.addEventListener('click', () => loadDataset('performance'));
+    if (tabIpos) tabIpos.addEventListener('click', () => loadDataset('ipos'));
 
     // 2. Populate Header Stats Overview
     function populateOverviewStats() {
@@ -234,6 +270,8 @@ document.addEventListener('DOMContentLoaded', () => {
         loadDataset('shorts');
     } else if (initialTab === 'performance') {
         loadDataset('performance');
+    } else if (initialTab === 'ipos') {
+        loadDataset('ipos');
     } else {
         loadDataset('space');
     }
@@ -1218,6 +1256,124 @@ document.addEventListener('DOMContentLoaded', () => {
         if (auditEl && window.PERFORMANCE_DATA.summary) {
             auditEl.textContent = "Win Rate: " + window.PERFORMANCE_DATA.summary.winRate + "%";
         }
+    }
+
+    // ==========================================================================
+    // RECENT IPOs SUPPORT FUNCTIONS
+    // ==========================================================================
+
+    function populateIposStats() {
+        if (!window.IPO_DATA || !window.IPO_DATA.ipos) return;
+        
+        const iposList = Object.values(window.IPO_DATA.ipos);
+        const total = iposList.length;
+        const buys = iposList.filter(s => s.signal === 'BUY').length;
+        const holds = iposList.filter(s => s.signal === 'HOLD').length;
+        const sells = iposList.filter(s => s.signal === 'SELL').length;
+        
+        document.getElementById('stat-total').textContent = total;
+        
+        const cards = document.querySelectorAll('.quick-overview-bar .overview-card');
+        if (cards.length >= 4) {
+            cards[0].querySelector('h4').textContent = "Total IPOs Scanned";
+            cards[0].querySelector('.value').style.color = 'var(--text-primary)';
+            
+            cards[1].querySelector('h4').textContent = "Buy Rated IPOs";
+            cards[1].querySelector('.value').textContent = buys;
+            cards[1].querySelector('.value').style.color = 'var(--color-buy)';
+            
+            cards[2].querySelector('h4').textContent = "Hold Rated IPOs";
+            cards[2].querySelector('.value').textContent = holds;
+            cards[2].querySelector('.value').style.color = 'var(--color-hold)';
+            
+            cards[3].querySelector('h4').textContent = "Sell Rated IPOs";
+            cards[3].querySelector('.value').textContent = sells;
+            cards[3].querySelector('.value').style.color = 'var(--color-sell)';
+        }
+    }
+
+    function renderIposTable() {
+        const tbody = document.getElementById('ipos-tbody');
+        if (!tbody) return;
+        tbody.innerHTML = '';
+        
+        if (!window.IPO_DATA || !window.IPO_DATA.ipos) {
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="9" style="text-align: center; padding: 30px; color: var(--text-muted);">
+                        No IPO data found. Please run <code>python analyze_ipos.py</code> first.
+                    </td>
+                </tr>
+            `;
+            return;
+        }
+        
+        const iposList = Object.values(window.IPO_DATA.ipos);
+        
+        if (iposList.length === 0) {
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="9" style="text-align: center; padding: 30px; color: var(--text-muted);">
+                        No recent IPO listings detected.
+                    </td>
+                </tr>
+            `;
+            return;
+        }
+        
+        iposList.forEach(ipo => {
+            const tr = document.createElement('tr');
+            tr.style.borderBottom = '1px solid rgba(255, 255, 255, 0.04)';
+            tr.style.transition = 'var(--transition-smooth)';
+            tr.style.cursor = 'pointer';
+            
+            // Hover highlighting
+            tr.addEventListener('mouseenter', () => {
+                tr.style.background = 'rgba(255, 255, 255, 0.02)';
+            });
+            tr.addEventListener('mouseleave', () => {
+                tr.style.background = 'transparent';
+            });
+            
+            const isPositive = ipo.changePercent >= 0;
+            const changeBadgeColor = isPositive ? 'var(--color-buy)' : 'var(--color-sell)';
+            
+            const consensusBadge = `<span style="display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: bold; 
+                                           background: ${ipo.signal === 'BUY' ? 'var(--color-buy-bg)' : (ipo.signal === 'SELL' ? 'var(--color-sell-bg)' : 'var(--color-hold-bg)')}; 
+                                           color: ${ipo.signal === 'BUY' ? 'var(--color-buy)' : (ipo.signal === 'SELL' ? 'var(--color-sell)' : 'var(--color-hold)')}; 
+                                           border: 1px solid ${ipo.signal === 'BUY' ? 'rgba(0, 230, 118, 0.2)' : (ipo.signal === 'SELL' ? 'rgba(255, 23, 68, 0.2)' : 'rgba(124, 77, 255, 0.2)')};">
+                                    ${ipo.signal}
+                                 </span>`;
+                                 
+            tr.innerHTML = `
+                <td style="padding: 12px 10px; vertical-align: middle;">
+                    <strong style="color: #ffffff; font-size: 1.05rem;">${ipo.ticker}</strong>
+                    <span style="color: var(--text-secondary); font-size: 0.75rem; display: block; margin-top: 2px;">${ipo.name}</span>
+                </td>
+                <td style="padding: 12px 10px; vertical-align: middle; color: var(--text-secondary);">${ipo.sector}</td>
+                <td style="padding: 12px 10px; text-align: right; vertical-align: middle; font-weight: 600;">$${ipo.ipo_price.toFixed(2)}</td>
+                <td style="padding: 12px 10px; text-align: right; vertical-align: middle; font-weight: 700; color: #ffffff;">$${ipo.price.toFixed(2)}</td>
+                <td style="padding: 12px 10px; text-align: right; vertical-align: middle; color: ${changeBadgeColor}; font-weight: 600;">
+                    ${isPositive ? '+' : ''}${ipo.changePercent.toFixed(2)}%
+                </td>
+                <td style="padding: 12px 10px; text-align: right; vertical-align: middle; font-family: monospace; font-size: 0.8rem; color: var(--color-cyan);">
+                    $${ipo.low_52w.toFixed(2)} - $${ipo.high_52w.toFixed(2)}
+                </td>
+                <td style="padding: 12px 10px; text-align: right; vertical-align: middle; color: var(--text-secondary);">${Math.round(ipo.avg_volume).toLocaleString()}</td>
+                <td style="padding: 12px 10px; text-align: center; vertical-align: middle;">${consensusBadge}</td>
+                <td style="padding: 12px 10px; vertical-align: middle; max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text-secondary);" title="${ipo.famous_news}">
+                    ${ipo.famous_news}
+                </td>
+            `;
+            
+            // Clicking row opens detailed chart modal
+            tr.addEventListener('click', () => {
+                stocksMap[ipo.ticker] = ipo;
+                openStockModal(ipo.ticker);
+            });
+            
+            tbody.appendChild(tr);
+        });
     }
 
 });

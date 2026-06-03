@@ -45,7 +45,7 @@ def git_push_updates():
             return False
 
         # 1. Add data files to staging first
-        subprocess.run(["git", "add", "data.js", "data_quantum.js", "performance.js"], cwd=CWD, check=True)
+        subprocess.run(["git", "add", "data.js", "data_quantum.js", "performance.js", "data_ipos.js"], cwd=CWD, check=True)
         
         # 2. Check if there are changes to commit
         status_res = subprocess.run(["git", "status", "--porcelain"], cwd=CWD, capture_output=True, text=True)
@@ -100,7 +100,10 @@ def main():
     # 2. Recalculate Quantum Stocks
     run_command(["analyze_quantum.py"], "Quantum Stock Scraper (analyze_quantum.py)")
     
-    # 3. Recalculate Performance Metrics & Backtests
+    # 3. Recalculate IPO Stocks
+    run_command(["analyze_ipos.py"], "IPO Stock Scraper (analyze_ipos.py)")
+    
+    # 4. Recalculate Performance Metrics & Backtests
     run_command(["backtest.py"], "Performance Audit Simulator (backtest.py)")
     
     # 4. Dispatch Space Technical Report Email
