@@ -115,7 +115,10 @@ def main():
     # 6. Dispatch Apex Shorts Report Email
     run_command(["send_email_shorts.py", "--sender", sender, "--password", password], "Apex Shorts Email Dispatcher (send_email_shorts.py)")
     
-    # 7. Push newly updated data files to GitHub Pages
+    # 7. Dispatch Recent IPOs Report Email
+    run_command(["send_email_ipos.py", "--sender", sender, "--password", password], "Recent IPOs Email Dispatcher (send_email_ipos.py)")
+    
+    # 8. Push newly updated data files to GitHub Pages
     git_push_updates()
     
     log("==================================================")
