@@ -854,13 +854,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
 
     function populateShortsStats() {
-        // Merge space and quantum stocks
+        // Merge space, quantum and IPO stocks
         let allStocks = [];
         if (window.STOCK_DATA && window.STOCK_DATA.stocks) {
             allStocks = allStocks.concat(Object.values(window.STOCK_DATA.stocks));
         }
         if (window.QUANTUM_DATA && window.QUANTUM_DATA.stocks) {
             allStocks = allStocks.concat(Object.values(window.QUANTUM_DATA.stocks));
+        }
+        if (window.IPO_DATA && window.IPO_DATA.ipos) {
+            allStocks = allStocks.concat(Object.values(window.IPO_DATA.ipos));
         }
         
         // Remove duplicates if any (by ticker)
@@ -914,13 +917,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (listMidtier) listMidtier.innerHTML = '';
         if (listHighbeta) listHighbeta.innerHTML = '';
         
-        // Merge space and quantum stocks
+        // Merge space, quantum and IPO stocks
         let allStocks = [];
         if (window.STOCK_DATA && window.STOCK_DATA.stocks) {
             allStocks = allStocks.concat(Object.values(window.STOCK_DATA.stocks));
         }
         if (window.QUANTUM_DATA && window.QUANTUM_DATA.stocks) {
             allStocks = allStocks.concat(Object.values(window.QUANTUM_DATA.stocks));
+        }
+        if (window.IPO_DATA && window.IPO_DATA.ipos) {
+            allStocks = allStocks.concat(Object.values(window.IPO_DATA.ipos));
         }
         
         // Remove duplicates if any (by ticker)

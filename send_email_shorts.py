@@ -9,6 +9,7 @@ from email.mime.text import MIMEText
 RECIPIENT_EMAIL = "DadiShekar@gmail.com"
 DATA_SPACE_FILE = "data.js"
 DATA_QUANTUM_FILE = "data_quantum.js"
+DATA_IPOS_FILE = "data_ipos.js"
 
 def load_dataset(filepath):
     if not os.path.exists(filepath):
@@ -35,6 +36,7 @@ def load_dataset(filepath):
 def merge_stocks():
     space_data = load_dataset(DATA_SPACE_FILE)
     quantum_data = load_dataset(DATA_QUANTUM_FILE)
+    ipos_data = load_dataset(DATA_IPOS_FILE)
     
     merged = {}
     last_updated = "Unknown"
@@ -48,6 +50,12 @@ def merge_stocks():
         if last_updated == "Unknown":
             last_updated = quantum_data.get('lastUpdated', 'Unknown')
         for t, s in quantum_data.get('stocks', {}).items():
+            merged[t] = s
+
+    if ipos_data:
+        if last_updated == "Unknown":
+            last_updated = ipos_data.get('lastUpdated', 'Unknown')
+        for t, s in ipos_data.get('ipos', {}).items():
             merged[t] = s
             
     return list(merged.values()), last_updated

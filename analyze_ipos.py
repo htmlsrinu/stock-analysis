@@ -240,6 +240,51 @@ def main():
                     'stoch_d': float(r['Stoch_D']) if 'Stoch_D' in r and not pd.isna(r['Stoch_D']) else None
                 })
 
+            # --- New Apex Shorts Calculations ---
+            try:
+                ticker_info = stock.info
+            except Exception:
+                ticker_info = {}
+                
+            short_percent = float(ticker_info.get('shortPercentOfFloat', 0.0)) if ticker_info.get('shortPercentOfFloat') is not None else 0.0
+            inst_percent = float(ticker_info.get('heldPercentInstitutions', 0.0)) if ticker_info.get('heldPercentInstitutions') is not None else 0.0
+            shares_short = int(ticker_info.get('sharesShort', 0)) if ticker_info.get('sharesShort') is not None else 0
+            days_to_cover = float(ticker_info.get('shortRatio', 0.0)) if ticker_info.get('shortRatio') is not None else 0.0
+            
+            # Short Squeeze Potential Evaluation
+            squeeze_risk = "LOW"
+            if short_percent >= 0.15 or days_to_cover >= 5:
+                squeeze_risk = "HIGH"
+            elif short_percent >= 0.08 or days_to_cover >= 3:
+                squeeze_risk = "MODERATE"
+                
+            # Institutional / Large Investor Support
+            inst_support = "LOW"
+            if inst_percent >= 0.50:
+                inst_support = "HIGH"
+            elif inst_percent >= 0.25:
+                inst_support = "MODERATE"
+                
+            # Determine if any Big Company / Insider is backing
+            major_backing = "Significant Institutional Support" if inst_percent >= 0.40 else "None Identified"
+            if ticker in ['CBRS', 'HAWK', 'PWRL']:
+                major_backing = "Venture Backed / Strategic Partners"
+                
+            has_big_news = "YES - Catalyst Active" if news_headline != "No recent headlines." else "NO - Quiet Session"
+            
+            curr_price = float(close.iloc[-1])
+            # Volatility approximation since ATR is not calculated, we use standard deviation or default to 3%
+            sd_val = float(df['BB_Std'].iloc[-1]) if 'BB_Std' in df and not pd.isna(df['BB_Std'].iloc[-1]) else curr_price * 0.03
+            if sd_val <= 0:
+                sd_val = curr_price * 0.03
+                
+            # Volatility-based Short Exit Target (Mean Reversion Cover Target) & Stop Loss
+            cover_price = min(bb_mid, curr_price - (2.0 * sd_val))
+            short_sl = curr_price + (1.5 * sd_val)
+            
+            cover_price = max(0.01, round(cover_price, 2))
+            short_sl = max(0.01, round(short_sl, 2))
+
             # Save result
             results[ticker] = {
                 'ticker': ticker,
@@ -260,6 +305,20 @@ def main():
                 'high': float(df['High'].iloc[-1]),
                 'low': float(df['Low'].iloc[-1]),
                 'volume': int(df['Volume'].iloc[-1]),
+                'shortAnalysis': {
+                    'shortPercent': round(short_percent * 100, 2),
+                    'sharesShort': shares_short,
+                    'daysToCover': days_to_cover,
+                    'squeezeRisk': squeeze_risk,
+                    'instPercent': round(inst_percent * 100, 2),
+                    'instSupport': inst_support,
+                    'majorBacking': major_backing,
+                    'hasBigNews': has_big_news,
+                    'latestHeadline': news_headline,
+                    'recommendedCover': cover_price,
+                    'shortStopLoss': short_sl,
+                    'percentAboveBB': round(((curr_price / bb_up) - 1.0) * 100, 1) if bb_up > 0 else 0.0
+                },
                 'indicators': {
                     'RSI': {'value': rsi_val, 'score': scores.get('RSI', 0.0), 'explanation': explanations.get('RSI', '')},
                     'MACD': {'value': macd_val, 'signal': macd_sig_val, 'score': scores.get('MACD', 0.0), 'explanation': explanations.get('MACD', '')},
