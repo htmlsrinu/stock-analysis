@@ -44,24 +44,24 @@ def git_push_updates():
             log("INFO: Git repository not initialized. Skipping Git push.")
             return False
 
-        # Pull first to resolve any remote conflicts automatically
-        subprocess.run(["git", "pull", "origin", "main", "--rebase"], cwd=CWD, check=True)
-
-        # Add data files to staging
+        # 1. Add data files to staging first
         subprocess.run(["git", "add", "data.js", "data_quantum.js", "performance.js"], cwd=CWD, check=True)
         
-        # Check if there are changes to commit
+        # 2. Check if there are changes to commit
         status_res = subprocess.run(["git", "status", "--porcelain"], cwd=CWD, capture_output=True, text=True)
         if not status_res.stdout.strip():
             log("INFO: No new data changes to commit.")
             return True
 
-        # Commit changes
+        # 3. Commit locally first to ensure working directory is clean
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         commit_msg = f"Auto-update stock analysis data - {timestamp}"
         subprocess.run(["git", "commit", "-m", commit_msg], cwd=CWD, check=True)
         
-        # Push to remote repository
+        # 4. Pull remote changes and replay local commit on top
+        subprocess.run(["git", "pull", "origin", "main", "--rebase"], cwd=CWD, check=True)
+        
+        # 5. Push to remote repository
         push_res = subprocess.run(["git", "push"], cwd=CWD, capture_output=True, text=True)
         if push_res.returncode == 0:
             log("SUCCESS: Pushed data updates to GitHub Pages remote.")
