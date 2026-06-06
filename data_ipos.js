@@ -6,64 +6,64 @@ window.IPO_DATA = {
       "name": "Cerebras Systems Inc.",
       "ipo_price": 185.0,
       "ipo_date": "2026-05-14",
-      "price": 209.80499267578125,
-      "change": -5.595001220703125,
-      "changePercent": -2.5974936765281176,
+      "price": 201.00999450683594,
+      "change": -14.389999389648438,
+      "changePercent": -6.680594149210561,
       "high_52w": 386.3399963378906,
       "high_52w_date": "2026-05-14",
-      "low_52w": 205.47000122070312,
-      "low_52w_date": "2026-06-04",
-      "avg_volume": 9185427.25,
+      "low_52w": 196.72999572753906,
+      "low_52w_date": "2026-06-05",
+      "avg_volume": 9336012.5,
       "sector": "Technology",
       "famous_news": "Should You Buy the Vanguard S&P 500 ETF As the Market Hits New Highs?",
-      "compositeScore": 0.44000000000000006,
-      "signal": "BUY",
+      "compositeScore": 0.12000000000000002,
+      "signal": "HOLD",
       "open": 208.67999267578125,
       "high": 222.77999877929688,
-      "low": 206.0399932861328,
-      "volume": 1965036,
+      "low": 196.72999572753906,
+      "volume": 4374400,
       "shortAnalysis": {
         "shortPercent": 5.5,
         "sharesShort": 1899096,
         "daysToCover": 0.08,
         "squeezeRisk": "LOW",
-        "instPercent": 8.69,
+        "instPercent": 18.8,
         "instSupport": "LOW",
         "majorBacking": "Venture Backed / Strategic Partners",
         "hasBigNews": "YES - Catalyst Active",
         "latestHeadline": "Should You Buy the Vanguard S&P 500 ETF As the Market Hits New Highs?",
-        "recommendedCover": 140.67,
-        "shortStopLoss": 261.66,
-        "percentAboveBB": -35.5
+        "recommendedCover": 130.18,
+        "shortStopLoss": 254.13,
+        "percentAboveBB": -38.4
       },
       "indicators": {
         "RSI": {
-          "value": 29.51848127514485,
+          "value": 27.850844486548155,
           "score": 1.0,
-          "explanation": "Oversold RSI (29.5). Bounce potential."
+          "explanation": "Oversold RSI (27.9). Bounce potential."
         },
         "MACD": {
-          "value": -11.710525295804672,
-          "signal": -11.95587065083207,
-          "score": 0.8,
-          "explanation": "Bullish MACD crossover."
+          "value": -13.274080525839395,
+          "signal": -12.998240804188551,
+          "score": -0.8,
+          "explanation": "Bearish MACD crossover."
         },
         "Bollinger": {
-          "upper": 325.29728954183236,
-          "lower": 187.01958400858268,
-          "middle": 256.1584367752075,
+          "upper": 326.439162842757,
+          "lower": 184.77833593653986,
+          "middle": 255.60874938964844,
           "score": 0.2,
           "explanation": "Trading below middle band, near support."
         },
         "Stochastic": {
-          "k": 3.2628269855476963,
-          "d": 4.027897729031088,
+          "k": 3.0225982033854377,
+          "d": 3.947821468310335,
           "score": 0.8,
-          "explanation": "Oversold (%K: 3.3)."
+          "explanation": "Oversold (%K: 3.0)."
         },
         "EMA": {
-          "ema9": 231.9637874520621,
-          "ema21": 248.97092375095232,
+          "ema9": 230.20478781827302,
+          "ema21": 247.93621808401758,
           "score": -0.6,
           "explanation": "Bearish short-term EMA trend."
         },
@@ -273,16 +273,16 @@ window.IPO_DATA = {
         },
         {
           "date": "06-05",
-          "close": 209.80499267578125,
-          "volume": 1965036,
-          "rsi": 29.51848127514485,
-          "macd": -11.710525295804672,
-          "macd_signal": -11.95587065083207,
-          "bb_upper": 325.29728954183236,
-          "bb_lower": 187.01958400858268,
-          "bb_middle": 256.1584367752075,
-          "stoch_k": 3.2628269855476963,
-          "stoch_d": 4.027897729031088
+          "close": 201.00999450683594,
+          "volume": 4374400,
+          "rsi": 27.850844486548155,
+          "macd": -13.274080525839395,
+          "macd_signal": -12.998240804188551,
+          "bb_upper": 326.439162842757,
+          "bb_lower": 184.77833593653986,
+          "bb_middle": 255.60874938964844,
+          "stoch_k": 3.0225982033854377,
+          "stoch_d": 3.947821468310335
         }
       ]
     },
@@ -291,22 +291,22 @@ window.IPO_DATA = {
       "name": "Fervo Energy Company",
       "ipo_price": 27.0,
       "ipo_date": "2026-05-14",
-      "price": 37.43000030517578,
-      "change": -1.4300003051757812,
-      "changePercent": -3.6798772071940156,
+      "price": 37.220001220703125,
+      "change": -1.6399993896484375,
+      "changePercent": -4.220276283813473,
       "high_52w": 42.650001525878906,
       "high_52w_date": "2026-05-15",
       "low_52w": 34.27000045776367,
       "low_52w_date": "2026-06-01",
-      "avg_volume": 6171265.529411765,
+      "avg_volume": 6238317.647058823,
       "sector": "Utilities",
       "famous_news": "A Hot IPO Lifts Geothermal Power Companies",
       "compositeScore": -1.1102230246251566e-17,
       "signal": "HOLD",
       "open": 38.11000061035156,
       "high": 38.79999923706055,
-      "low": 36.723899841308594,
-      "volume": 799014,
+      "low": 36.720001220703125,
+      "volume": 1938900,
       "shortAnalysis": {
         "shortPercent": 0.0,
         "sharesShort": 2826230,
@@ -317,38 +317,38 @@ window.IPO_DATA = {
         "majorBacking": "None Identified",
         "hasBigNews": "YES - Catalyst Active",
         "latestHeadline": "A Hot IPO Lifts Geothermal Power Companies",
-        "recommendedCover": 33.74,
-        "shortStopLoss": 40.2,
-        "percentAboveBB": -11.2
+        "recommendedCover": 33.51,
+        "shortStopLoss": 40.0,
+        "percentAboveBB": -11.7
       },
       "indicators": {
         "RSI": {
-          "value": 48.94983965945796,
+          "value": 48.42963784038327,
           "score": 0.0,
-          "explanation": "Neutral RSI (48.9)."
+          "explanation": "Neutral RSI (48.4)."
         },
         "MACD": {
-          "value": -0.012538897938810578,
-          "signal": 0.04050543916127385,
+          "value": -0.049872068511724876,
+          "signal": 0.015616658779330987,
           "score": -0.8,
           "explanation": "Bearish MACD crossover."
         },
         "Bollinger": {
-          "upper": 42.14114332058313,
-          "lower": 34.7623861270846,
-          "middle": 38.45176472383387,
+          "upper": 42.14470205544175,
+          "lower": 34.734121617582154,
+          "middle": 38.43941183651195,
           "score": 0.2,
           "explanation": "Trading below middle band, near support."
         },
         "Stochastic": {
-          "k": 38.072290813251975,
-          "d": 53.62154961370745,
+          "k": 35.54218112951028,
+          "d": 52.77817971912688,
           "score": 0.0,
           "explanation": "Stochastic neutral."
         },
         "EMA": {
-          "ema9": 38.10414825127518,
-          "ema21": 38.01594349941993,
+          "ema9": 38.062148434380646,
+          "ema21": 37.992610267811855,
           "score": 0.6,
           "explanation": "Bullish short-term EMA trend."
         },
@@ -571,16 +571,16 @@ window.IPO_DATA = {
         },
         {
           "date": "06-05",
-          "close": 37.43000030517578,
-          "volume": 799014,
-          "rsi": 48.94983965945796,
-          "macd": -0.012538897938810578,
-          "macd_signal": 0.04050543916127385,
-          "bb_upper": 42.14114332058313,
-          "bb_lower": 34.7623861270846,
-          "bb_middle": 38.45176472383387,
-          "stoch_k": 38.072290813251975,
-          "stoch_d": 53.62154961370745
+          "close": 37.220001220703125,
+          "volume": 1938900,
+          "rsi": 48.42963784038327,
+          "macd": -0.049872068511724876,
+          "macd_signal": 0.015616658779330987,
+          "bb_upper": 42.14470205544175,
+          "bb_lower": 34.734121617582154,
+          "bb_middle": 38.43941183651195,
+          "stoch_k": 35.54218112951028,
+          "stoch_d": 52.77817971912688
         }
       ]
     },
@@ -589,22 +589,22 @@ window.IPO_DATA = {
       "name": "Lincoln International, Inc.",
       "ipo_price": 20.0,
       "ipo_date": "2026-05-21",
-      "price": 22.639999389648438,
-      "change": -0.9300003051757812,
-      "changePercent": -3.94569502425578,
+      "price": 22.15999984741211,
+      "change": -1.4099998474121094,
+      "changePercent": -5.982180168299845,
       "high_52w": 24.899999618530273,
       "high_52w_date": "2026-06-02",
       "low_52w": 22.0,
       "low_52w_date": "2026-05-27",
-      "avg_volume": 1299692.75,
+      "avg_volume": 1313900.0,
       "sector": "Financial Services",
       "famous_news": "The Anything-Goes Era in Private-Credit Lending Is Coming to an End",
-      "compositeScore": -1.1102230246251566e-17,
+      "compositeScore": 0.16,
       "signal": "HOLD",
       "open": 23.219999313354492,
-      "high": 23.325000762939453,
-      "low": 22.575000762939453,
-      "volume": 8813,
+      "high": 23.329999923706055,
+      "low": 22.079999923706055,
+      "volume": 179300,
       "shortAnalysis": {
         "shortPercent": 0.0,
         "sharesShort": 0,
@@ -615,38 +615,38 @@ window.IPO_DATA = {
         "majorBacking": "None Identified",
         "hasBigNews": "YES - Catalyst Active",
         "latestHeadline": "The Anything-Goes Era in Private-Credit Lending Is Coming to an End",
-        "recommendedCover": 21.3,
-        "shortStopLoss": 23.65,
-        "percentAboveBB": -8.5
+        "recommendedCover": 20.7,
+        "shortStopLoss": 23.26,
+        "percentAboveBB": -10.7
       },
       "indicators": {
         "RSI": {
-          "value": 45.01773010436841,
+          "value": 41.34675623062817,
           "score": 0.0,
-          "explanation": "Neutral RSI (45.0)."
+          "explanation": "Neutral RSI (41.3)."
         },
         "MACD": {
-          "value": -0.1952221816157369,
-          "signal": -0.10598364874012042,
+          "value": -0.29807922638066486,
+          "signal": -0.17455501191673906,
           "score": -0.8,
           "explanation": "Bearish MACD crossover."
         },
         "Bollinger": {
-          "upper": 24.73057574369355,
-          "lower": 22.047757284464005,
-          "middle": 23.389166514078777,
+          "upper": 24.811256069980324,
+          "lower": 21.887077034471176,
+          "middle": 23.34916655222575,
           "score": 0.2,
           "explanation": "Trading below middle band, near support."
         },
         "Stochastic": {
-          "k": 22.06894736600349,
+          "k": 5.517236841500872,
           "d": NaN,
-          "score": 0.0,
-          "explanation": "Stochastic neutral."
+          "score": 0.8,
+          "explanation": "Oversold (%K: 5.5)."
         },
         "EMA": {
-          "ema9": 23.340962051415314,
-          "ema21": 23.29333965228111,
+          "ema9": 23.24496214296805,
+          "ema21": 23.219493568860138,
           "score": 0.6,
           "explanation": "Bullish short-term EMA trend."
         },
@@ -804,15 +804,15 @@ window.IPO_DATA = {
         },
         {
           "date": "06-05",
-          "close": 22.639999389648438,
-          "volume": 8813,
-          "rsi": 45.01773010436841,
-          "macd": -0.1952221816157369,
-          "macd_signal": -0.10598364874012042,
-          "bb_upper": 24.73057574369355,
-          "bb_lower": 22.047757284464005,
-          "bb_middle": 23.389166514078777,
-          "stoch_k": 22.06894736600349,
+          "close": 22.15999984741211,
+          "volume": 179300,
+          "rsi": 41.34675623062817,
+          "macd": -0.29807922638066486,
+          "macd_signal": -0.17455501191673906,
+          "bb_upper": 24.811256069980324,
+          "bb_lower": 21.887077034471176,
+          "bb_middle": 23.34916655222575,
+          "stoch_k": 5.517236841500872,
           "stoch_d": null
         }
       ]
@@ -822,22 +822,22 @@ window.IPO_DATA = {
       "name": "Blackstone Digital Infrastructure Trust Inc.",
       "ipo_price": 20.0,
       "ipo_date": "2026-05-14",
-      "price": 21.875,
-      "change": -0.22500038146972656,
-      "changePercent": -1.0181012560451563,
+      "price": 21.84000015258789,
+      "change": -0.26000022888183594,
+      "changePercent": -1.1764716035925438,
       "high_52w": 22.899999618530273,
       "high_52w_date": "2026-05-20",
       "low_52w": 19.600000381469727,
       "low_52w_date": "2026-05-14",
-      "avg_volume": 1935509.0625,
+      "avg_volume": 1958218.75,
       "sector": "Real Estate",
       "famous_news": "Blackstone Digital Infrastructure Trust IPO Opens Access To Hyperscale Data Centers",
       "compositeScore": -0.18000000000000002,
       "signal": "HOLD",
       "open": 21.93000030517578,
       "high": 22.100000381469727,
-      "low": 21.645000457763672,
-      "volume": 183445,
+      "low": 21.40999984741211,
+      "volume": 546800,
       "shortAnalysis": {
         "shortPercent": 0.0,
         "sharesShort": 509328,
@@ -848,38 +848,38 @@ window.IPO_DATA = {
         "majorBacking": "None Identified",
         "hasBigNews": "YES - Catalyst Active",
         "latestHeadline": "Blackstone Digital Infrastructure Trust IPO Opens Access To Hyperscale Data Centers",
-        "recommendedCover": 20.45,
-        "shortStopLoss": 22.95,
-        "percentAboveBB": -5.2
+        "recommendedCover": 20.41,
+        "shortStopLoss": 22.91,
+        "percentAboveBB": -5.4
       },
       "indicators": {
         "RSI": {
-          "value": 61.449855031604,
+          "value": 60.814127843836445,
           "score": -0.5,
-          "explanation": "Near resistance RSI (61.4)."
+          "explanation": "Near resistance RSI (60.8)."
         },
         "MACD": {
-          "value": 0.06869860281086204,
-          "signal": 0.07443655728552147,
+          "value": 0.062476407715376325,
+          "signal": 0.07028842722186432,
           "score": -0.8,
           "explanation": "Bearish MACD crossover."
         },
         "Bollinger": {
-          "upper": 23.085860099955067,
-          "lower": 20.229764852361217,
-          "middle": 21.657812476158142,
+          "upper": 23.08235975912855,
+          "lower": 20.22889021226122,
+          "middle": 21.655624985694885,
           "score": -0.2,
           "explanation": "Trading above middle band, near resistance."
         },
         "Stochastic": {
-          "k": 62.72728657608923,
-          "d": 67.22860873651179,
+          "k": 61.45456485247532,
+          "d": 66.80436816197383,
           "score": 0.0,
           "explanation": "Stochastic neutral."
         },
         "EMA": {
-          "ema9": 21.797896796849052,
-          "ema21": 21.535590448808673,
+          "ema9": 21.79089682736663,
+          "ema21": 21.531472819701364,
           "score": 0.6,
           "explanation": "Bullish short-term EMA trend."
         },
@@ -1089,16 +1089,16 @@ window.IPO_DATA = {
         },
         {
           "date": "06-05",
-          "close": 21.875,
-          "volume": 183445,
-          "rsi": 61.449855031604,
-          "macd": 0.06869860281086204,
-          "macd_signal": 0.07443655728552147,
-          "bb_upper": 23.085860099955067,
-          "bb_lower": 20.229764852361217,
-          "bb_middle": 21.657812476158142,
-          "stoch_k": 62.72728657608923,
-          "stoch_d": 67.22860873651179
+          "close": 21.84000015258789,
+          "volume": 546800,
+          "rsi": 60.814127843836445,
+          "macd": 0.062476407715376325,
+          "macd_signal": 0.07028842722186432,
+          "bb_upper": 23.08235975912855,
+          "bb_lower": 20.22889021226122,
+          "bb_middle": 21.655624985694885,
+          "stoch_k": 61.45456485247532,
+          "stoch_d": 66.80436816197383
         }
       ]
     },
@@ -1107,22 +1107,22 @@ window.IPO_DATA = {
       "name": "VIDA Global Inc.",
       "ipo_price": 4.0,
       "ipo_date": "2026-05-15",
-      "price": 4.400000095367432,
-      "change": -1.0399999618530273,
-      "changePercent": -19.117646156504087,
+      "price": 4.050000190734863,
+      "change": -1.3899998664855957,
+      "changePercent": -25.551467865164124,
       "high_52w": 6.210000038146973,
       "high_52w_date": "2026-06-04",
       "low_52w": 2.0399999618530273,
       "low_52w_date": "2026-05-18",
-      "avg_volume": 5067013.2,
+      "avg_volume": 5072046.666666667,
       "sector": "Technology",
       "famous_news": "No recent headlines.",
       "compositeScore": -0.08000000000000002,
       "signal": "HOLD",
       "open": 5.329999923706055,
-      "high": 5.219900131225586,
-      "low": 3.751199960708618,
-      "volume": 257298,
+      "high": 5.329999923706055,
+      "low": 3.75,
+      "volume": 332800,
       "shortAnalysis": {
         "shortPercent": 0.0,
         "sharesShort": 0,
@@ -1133,38 +1133,38 @@ window.IPO_DATA = {
         "majorBacking": "None Identified",
         "hasBigNews": "NO - Quiet Session",
         "latestHeadline": "No recent headlines.",
-        "recommendedCover": 2.2,
-        "shortStopLoss": 6.05,
-        "percentAboveBB": -28.7
+        "recommendedCover": 1.86,
+        "shortStopLoss": 5.69,
+        "percentAboveBB": -34.0
       },
       "indicators": {
         "RSI": {
-          "value": 57.51817731936214,
+          "value": 53.9893198181183,
           "score": 0.0,
-          "explanation": "Neutral RSI (57.5)."
+          "explanation": "Neutral RSI (54.0)."
         },
         "MACD": {
-          "value": 0.1948887773606094,
-          "signal": 0.3092758834045698,
+          "value": 0.1073888012024673,
+          "signal": 0.25094256596580844,
           "score": -0.8,
           "explanation": "Bearish MACD crossover."
         },
         "Bollinger": {
-          "upper": 6.173222938267406,
-          "lower": 1.7761103798071392,
-          "middle": 3.9746666590372723,
+          "upper": 6.137940223507918,
+          "lower": 1.764726440615617,
+          "middle": 3.9513333320617674,
           "score": -0.2,
           "explanation": "Trading above middle band, near resistance."
         },
         "Stochastic": {
-          "k": 56.59472637338388,
+          "k": 48.20144344424553,
           "d": NaN,
           "score": 0.0,
           "explanation": "Stochastic neutral."
         },
         "EMA": {
-          "ema9": 4.49362580715081,
-          "ema21": 4.121634406416705,
+          "ema9": 4.4236258262242965,
+          "ema21": 4.077884418337634,
           "score": 0.6,
           "explanation": "Bullish short-term EMA trend."
         },
@@ -1361,15 +1361,15 @@ window.IPO_DATA = {
         },
         {
           "date": "06-05",
-          "close": 4.400000095367432,
-          "volume": 257298,
-          "rsi": 57.51817731936214,
-          "macd": 0.1948887773606094,
-          "macd_signal": 0.3092758834045698,
-          "bb_upper": 6.173222938267406,
-          "bb_lower": 1.7761103798071392,
-          "bb_middle": 3.9746666590372723,
-          "stoch_k": 56.59472637338388,
+          "close": 4.050000190734863,
+          "volume": 332800,
+          "rsi": 53.9893198181183,
+          "macd": 0.1073888012024673,
+          "macd_signal": 0.25094256596580844,
+          "bb_upper": 6.137940223507918,
+          "bb_lower": 1.764726440615617,
+          "bb_middle": 3.9513333320617674,
+          "stoch_k": 48.20144344424553,
           "stoch_d": null
         }
       ]
@@ -1379,22 +1379,22 @@ window.IPO_DATA = {
       "name": "HawkEye 360, Inc.",
       "ipo_price": 26.0,
       "ipo_date": "2026-05-07",
-      "price": 25.0,
-      "change": -1.8899993896484375,
-      "changePercent": -7.02863307009226,
+      "price": 25.190000534057617,
+      "change": -1.6999988555908203,
+      "changePercent": -6.322048695342297,
       "high_52w": 35.72999954223633,
       "high_52w_date": "2026-05-12",
-      "low_52w": 24.780000686645508,
+      "low_52w": 24.43000030517578,
       "low_52w_date": "2026-06-05",
-      "avg_volume": 1752439.0476190476,
+      "avg_volume": 1774319.0476190476,
       "sector": "Industrials",
       "famous_news": "HawkEye 360 Adds L3Harris Veteran As Investors Weigh Valuation Gap",
       "compositeScore": 0.27999999999999997,
       "signal": "BUY",
       "open": 26.540000915527344,
       "high": 27.610000610351562,
-      "low": 24.780000686645508,
-      "volume": 507520,
+      "low": 24.43000030517578,
+      "volume": 967000,
       "shortAnalysis": {
         "shortPercent": 1.38,
         "sharesShort": 1268837,
@@ -1405,38 +1405,38 @@ window.IPO_DATA = {
         "majorBacking": "Venture Backed / Strategic Partners",
         "hasBigNews": "YES - Catalyst Active",
         "latestHeadline": "HawkEye 360 Adds L3Harris Veteran As Investors Weigh Valuation Gap",
-        "recommendedCover": 19.84,
-        "shortStopLoss": 28.87,
-        "percentAboveBB": -30.7
+        "recommendedCover": 20.08,
+        "shortStopLoss": 29.03,
+        "percentAboveBB": -30.1
       },
       "indicators": {
         "RSI": {
-          "value": 29.246713965398754,
+          "value": 29.60934890235366,
           "score": 1.0,
-          "explanation": "Oversold RSI (29.2). Bounce potential."
+          "explanation": "Oversold RSI (29.6). Bounce potential."
         },
         "MACD": {
-          "value": -1.540470342362969,
-          "signal": -1.2294252144324829,
+          "value": -1.5116823826572698,
+          "signal": -1.2150312345796332,
           "score": -0.8,
           "explanation": "Bearish MACD crossover."
         },
         "Bollinger": {
-          "upper": 36.063074577593454,
-          "lower": 25.74492446110283,
-          "middle": 30.903999519348144,
+          "upper": 36.02729991446966,
+          "lower": 25.79969917763239,
+          "middle": 30.913499546051025,
           "score": 1.0,
           "explanation": "Price at lower Bollinger Band. Discounted price."
         },
         "Stochastic": {
-          "k": 2.3887002132352655,
-          "d": 7.933485507208851,
+          "k": 7.94979204632383,
+          "d": 9.78718278490504,
           "score": 0.8,
-          "explanation": "Oversold (%K: 2.4)."
+          "explanation": "Oversold (%K: 7.9)."
         },
         "EMA": {
-          "ema9": 28.659346480657092,
-          "ema21": 30.4742923318575,
+          "ema9": 28.697346587468616,
+          "ema21": 30.49156510768092,
           "score": -0.6,
           "explanation": "Bearish short-term EMA trend."
         },
@@ -1711,16 +1711,16 @@ window.IPO_DATA = {
         },
         {
           "date": "06-05",
-          "close": 25.0,
-          "volume": 507520,
-          "rsi": 29.246713965398754,
-          "macd": -1.540470342362969,
-          "macd_signal": -1.2294252144324829,
-          "bb_upper": 36.063074577593454,
-          "bb_lower": 25.74492446110283,
-          "bb_middle": 30.903999519348144,
-          "stoch_k": 2.3887002132352655,
-          "stoch_d": 7.933485507208851
+          "close": 25.190000534057617,
+          "volume": 967000,
+          "rsi": 29.60934890235366,
+          "macd": -1.5116823826572698,
+          "macd_signal": -1.2150312345796332,
+          "bb_upper": 36.02729991446966,
+          "bb_lower": 25.79969917763239,
+          "bb_middle": 30.913499546051025,
+          "stoch_k": 7.94979204632383,
+          "stoch_d": 9.78718278490504
         }
       ]
     },
@@ -1729,22 +1729,22 @@ window.IPO_DATA = {
       "name": "Odyssey Therapeutics, Inc.",
       "ipo_price": 18.0,
       "ipo_date": "2026-05-08",
-      "price": 16.739999771118164,
-      "change": -0.26000022888183594,
-      "changePercent": -1.5294131110696219,
+      "price": 16.43000030517578,
+      "change": -0.5699996948242188,
+      "changePercent": -3.352939381318931,
       "high_52w": 20.299999237060547,
       "high_52w_date": "2026-05-08",
       "low_52w": 15.350000381469727,
       "low_52w_date": "2026-05-08",
-      "avg_volume": 458677.2,
+      "avg_volume": 476495.0,
       "sector": "Healthcare",
       "famous_news": "Healthcare IPOs Raise $4.7 Billion As Odyssey, Mobia Debuts Slip",
-      "compositeScore": -0.24,
+      "compositeScore": 0.08,
       "signal": "HOLD",
       "open": 16.829999923706055,
-      "high": 17.325000762939453,
-      "low": 16.20669937133789,
-      "volume": 33444,
+      "high": 17.329999923706055,
+      "low": 16.010000228881836,
+      "volume": 389800,
       "shortAnalysis": {
         "shortPercent": 0.21,
         "sharesShort": 86503,
@@ -1755,38 +1755,38 @@ window.IPO_DATA = {
         "majorBacking": "None Identified",
         "hasBigNews": "YES - Catalyst Active",
         "latestHeadline": "Healthcare IPOs Raise $4.7 Billion As Odyssey, Mobia Debuts Slip",
-        "recommendedCover": 15.86,
-        "shortStopLoss": 17.4,
-        "percentAboveBB": -7.7
+        "recommendedCover": 15.5,
+        "shortStopLoss": 17.13,
+        "percentAboveBB": -9.6
       },
       "indicators": {
         "RSI": {
-          "value": 46.04579128981001,
+          "value": 42.45322104925725,
           "score": 0.0,
-          "explanation": "Neutral RSI (46.0)."
+          "explanation": "Neutral RSI (42.5)."
         },
         "MACD": {
-          "value": -0.1257528937759318,
-          "signal": -0.11089767590243799,
+          "value": -0.1727225098278069,
+          "signal": -0.13438248392837554,
           "score": -0.8,
           "explanation": "Bearish MACD crossover."
         },
         "Bollinger": {
-          "upper": 18.14125607533383,
-          "lower": 16.377743978071933,
-          "middle": 17.25950002670288,
-          "score": 0.2,
-          "explanation": "Trading below middle band, near support."
+          "upper": 18.173796805749628,
+          "lower": 16.314203301061898,
+          "middle": 17.244000053405763,
+          "score": 1.0,
+          "explanation": "Price at lower Bollinger Band. Discounted price."
         },
         "Stochastic": {
-          "k": 22.283047443667183,
-          "d": 24.30711993344087,
-          "score": 0.0,
-          "explanation": "Stochastic neutral."
+          "k": 16.216218200301075,
+          "d": 22.284843518985497,
+          "score": 0.8,
+          "explanation": "Oversold (%K: 16.2)."
         },
         "EMA": {
-          "ema9": 17.01609889114063,
-          "ema21": 17.053325049270786,
+          "ema9": 16.95409899795215,
+          "ema21": 17.023801290609605,
           "score": -0.6,
           "explanation": "Bearish short-term EMA trend."
         },
@@ -2048,16 +2048,16 @@ window.IPO_DATA = {
         },
         {
           "date": "06-05",
-          "close": 16.739999771118164,
-          "volume": 33444,
-          "rsi": 46.04579128981001,
-          "macd": -0.1257528937759318,
-          "macd_signal": -0.11089767590243799,
-          "bb_upper": 18.14125607533383,
-          "bb_lower": 16.377743978071933,
-          "bb_middle": 17.25950002670288,
-          "stoch_k": 22.283047443667183,
-          "stoch_d": 24.30711993344087
+          "close": 16.43000030517578,
+          "volume": 389800,
+          "rsi": 42.45322104925725,
+          "macd": -0.1727225098278069,
+          "macd_signal": -0.13438248392837554,
+          "bb_upper": 18.173796805749628,
+          "bb_lower": 16.314203301061898,
+          "bb_middle": 17.244000053405763,
+          "stoch_k": 16.216218200301075,
+          "stoch_d": 22.284843518985497
         }
       ]
     },
@@ -2066,22 +2066,22 @@ window.IPO_DATA = {
       "name": "Suja Life, Inc.",
       "ipo_price": 21.0,
       "ipo_date": "2026-05-07",
-      "price": 13.90999984741211,
-      "change": 0.21000003814697266,
-      "changePercent": 1.5328470151142026,
+      "price": 14.0600004196167,
+      "change": 0.3600006103515625,
+      "changePercent": 2.627741717982346,
       "high_52w": 18.479999542236328,
       "high_52w_date": "2026-05-07",
       "low_52w": 12.0,
       "low_52w_date": "2026-06-03",
-      "avg_volume": 444732.61904761905,
+      "avg_volume": 454380.95238095237,
       "sector": "Consumer Defensive",
       "famous_news": "No recent headlines.",
       "compositeScore": 0.18000000000000002,
       "signal": "HOLD",
       "open": 13.819999694824219,
-      "high": 14.0,
+      "high": 14.510000228881836,
       "low": 12.890000343322754,
-      "volume": 79185,
+      "volume": 281800,
       "shortAnalysis": {
         "shortPercent": 3.16,
         "sharesShort": 346370,
@@ -2092,38 +2092,38 @@ window.IPO_DATA = {
         "majorBacking": "None Identified",
         "hasBigNews": "NO - Quiet Session",
         "latestHeadline": "No recent headlines.",
-        "recommendedCover": 10.92,
-        "shortStopLoss": 16.16,
-        "percentAboveBB": -24.0
+        "recommendedCover": 11.08,
+        "shortStopLoss": 16.29,
+        "percentAboveBB": -23.1
       },
       "indicators": {
         "RSI": {
-          "value": 37.56590773942232,
+          "value": 38.90088169987827,
           "score": 0.5,
-          "explanation": "Near support RSI (37.6)."
+          "explanation": "Near support RSI (38.9)."
         },
         "MACD": {
-          "value": -0.46288667782648396,
-          "signal": -0.5352594724212381,
+          "value": -0.44015931840154643,
+          "signal": -0.5238957927087693,
           "score": 0.8,
           "explanation": "Bullish MACD crossover."
         },
         "Bollinger": {
-          "upper": 18.296926524305274,
-          "lower": 12.31007363591201,
-          "middle": 15.303500080108643,
+          "upper": 18.29044486142063,
+          "lower": 12.331555356017113,
+          "middle": 15.311000108718872,
           "score": 0.2,
           "explanation": "Trading below middle band, near support."
         },
         "Stochastic": {
-          "k": 38.43058573258942,
-          "d": 29.79924164686022,
+          "k": 41.44870631404209,
+          "d": 30.805281840677775,
           "score": 0.0,
           "explanation": "Stochastic neutral."
         },
         "EMA": {
-          "ema9": 14.157784556981214,
-          "ema21": 15.14749469164381,
+          "ema9": 14.187784671422133,
+          "ema21": 15.161131107298774,
           "score": -0.6,
           "explanation": "Bearish short-term EMA trend."
         },
@@ -2398,16 +2398,16 @@ window.IPO_DATA = {
         },
         {
           "date": "06-05",
-          "close": 13.90999984741211,
-          "volume": 79185,
-          "rsi": 37.56590773942232,
-          "macd": -0.46288667782648396,
-          "macd_signal": -0.5352594724212381,
-          "bb_upper": 18.296926524305274,
-          "bb_lower": 12.31007363591201,
-          "bb_middle": 15.303500080108643,
-          "stoch_k": 38.43058573258942,
-          "stoch_d": 29.79924164686022
+          "close": 14.0600004196167,
+          "volume": 281800,
+          "rsi": 38.90088169987827,
+          "macd": -0.44015931840154643,
+          "macd_signal": -0.5238957927087693,
+          "bb_upper": 18.29044486142063,
+          "bb_lower": 12.331555356017113,
+          "bb_middle": 15.311000108718872,
+          "stoch_k": 41.44870631404209,
+          "stoch_d": 30.805281840677775
         }
       ]
     },
@@ -2416,22 +2416,22 @@ window.IPO_DATA = {
       "name": "Powerlaw Corp. (SpaceX Proxy)",
       "ipo_price": 20.0,
       "ipo_date": "2026-05-27",
-      "price": 17.655000686645508,
-      "change": -1.8149986267089844,
-      "changePercent": -9.322027173694226,
+      "price": 17.489999771118164,
+      "change": -1.9799995422363281,
+      "changePercent": -10.169489532946441,
       "high_52w": 40.0,
       "high_52w_date": "2026-05-27",
-      "low_52w": 17.600000381469727,
+      "low_52w": 17.309999465942383,
       "low_52w_date": "2026-06-05",
-      "avg_volume": 532689.125,
+      "avg_volume": 549862.5,
       "sector": "",
       "famous_news": "No recent headlines.",
       "compositeScore": 0.56,
       "signal": "BUY",
       "open": 20.0,
-      "high": 20.09749984741211,
-      "low": 17.600000381469727,
-      "volume": 395513,
+      "high": 20.100000381469727,
+      "low": 17.309999465942383,
+      "volume": 532900,
       "shortAnalysis": {
         "shortPercent": 0.0,
         "sharesShort": 0,
@@ -2442,38 +2442,38 @@ window.IPO_DATA = {
         "majorBacking": "Venture Backed / Strategic Partners",
         "hasBigNews": "NO - Quiet Session",
         "latestHeadline": "No recent headlines.",
-        "recommendedCover": 8.34,
-        "shortStopLoss": 24.64,
-        "percentAboveBB": -45.6
+        "recommendedCover": 8.12,
+        "shortStopLoss": 24.52,
+        "percentAboveBB": -46.1
       },
       "indicators": {
         "RSI": {
-          "value": 13.831125711605026,
+          "value": 13.591679305971581,
           "score": 1.0,
-          "explanation": "Oversold RSI (13.8). Bounce potential."
+          "explanation": "Oversold RSI (13.6). Bounce potential."
         },
         "MACD": {
-          "value": -1.3241884493939224,
-          "signal": -1.4032787553612847,
+          "value": -1.3681886935345489,
+          "signal": -1.4326122514550357,
           "score": 0.8,
           "explanation": "Bullish MACD crossover."
         },
         "Bollinger": {
-          "upper": 32.44138169237313,
-          "lower": 13.81236863187614,
-          "middle": 23.126875162124634,
+          "upper": 32.47670838573869,
+          "lower": 13.73579170962874,
+          "middle": 23.106250047683716,
           "score": 0.2,
           "explanation": "Trading below middle band, near support."
         },
         "Stochastic": {
-          "k": 0.24553708084810497,
+          "k": 0.793302339934582,
           "d": NaN,
           "score": 0.8,
-          "explanation": "Oversold (%K: 0.2)."
+          "explanation": "Oversold (%K: 0.8)."
         },
         "EMA": {
-          "ema9": 17.655000686645508,
-          "ema21": 17.655000686645508,
+          "ema9": 17.489999771118164,
+          "ema21": 17.489999771118164,
           "score": 0.0,
           "explanation": "Insufficient history for EMA trend."
         },
@@ -2579,15 +2579,15 @@ window.IPO_DATA = {
         },
         {
           "date": "06-05",
-          "close": 17.655000686645508,
-          "volume": 395513,
-          "rsi": 13.831125711605026,
-          "macd": -1.3241884493939224,
-          "macd_signal": -1.4032787553612847,
-          "bb_upper": 32.44138169237313,
-          "bb_lower": 13.81236863187614,
-          "bb_middle": 23.126875162124634,
-          "stoch_k": 0.24553708084810497,
+          "close": 17.489999771118164,
+          "volume": 532900,
+          "rsi": 13.591679305971581,
+          "macd": -1.3681886935345489,
+          "macd_signal": -1.4326122514550357,
+          "bb_upper": 32.47670838573869,
+          "bb_lower": 13.73579170962874,
+          "bb_middle": 23.106250047683716,
+          "stoch_k": 0.793302339934582,
           "stoch_d": null
         }
       ]
