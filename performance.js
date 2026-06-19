@@ -7,8 +7,8 @@ window.PERFORMANCE_DATA = {
     "winRate": 34.1,
     "avgReturn": -0.16,
     "startingCapital": 100000.0,
-    "endingCapital": 98433.85,
-    "netProfitDollars": -1566.15,
+    "endingCapital": 98433.54,
+    "netProfitDollars": -1566.46,
     "netReturnPct": -1.57
   },
   "trades": [
@@ -96,9 +96,9 @@ window.PERFORMANCE_DATA = {
       "target": 148.0865005493164,
       "stop": 175.8995947265625,
       "exit_date": "06-18",
-      "exit_price": 167.96499633789062,
+      "exit_price": 167.97000122070312,
       "outcome": "ACTIVE",
-      "pnl": -3.128262647172786,
+      "pnl": -3.1313355783219032,
       "entry_index": 46,
       "resolution_index": 59
     },
