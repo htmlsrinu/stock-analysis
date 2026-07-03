@@ -1,17 +1,107 @@
 window.PERFORMANCE_DATA = {
   "summary": {
-    "totalTrades": 100,
-    "closedTrades": 85,
-    "wins": 29,
-    "losses": 56,
-    "winRate": 34.1,
-    "avgReturn": -0.16,
+    "totalTrades": 82,
+    "closedTrades": 73,
+    "wins": 31,
+    "losses": 42,
+    "winRate": 42.5,
+    "avgReturn": 1.71,
     "startingCapital": 100000.0,
-    "endingCapital": 98433.54,
-    "netProfitDollars": -1566.46,
-    "netReturnPct": -1.57
+    "endingCapital": 114010.64,
+    "netProfitDollars": 14010.64,
+    "netReturnPct": 14.01
   },
   "trades": [
+    {
+      "ticker": "HWM",
+      "sector": "Space",
+      "signal": "SHORT",
+      "entry_date": "06-15",
+      "entry_price": 270.44000244140625,
+      "target": 256.74100189208986,
+      "stop": 292.07520263671876,
+      "exit_date": "07-02",
+      "exit_price": 270.4100036621094,
+      "outcome": "ACTIVE",
+      "pnl": 0.011092582098082282,
+      "entry_index": 47,
+      "resolution_index": 59
+    },
+    {
+      "ticker": "LMT",
+      "sector": "Space",
+      "signal": "SHORT",
+      "entry_date": "06-11",
+      "entry_price": 548.6799926757812,
+      "target": 523.6308197021484,
+      "stop": 592.5743920898437,
+      "exit_date": "06-18",
+      "exit_price": 523.6308197021484,
+      "outcome": "WIN",
+      "pnl": 4.565351991690825,
+      "entry_index": 45,
+      "resolution_index": 50
+    },
+    {
+      "ticker": "RTX",
+      "sector": "Space",
+      "signal": "SHORT",
+      "entry_date": "06-11",
+      "entry_price": 184.2100067138672,
+      "target": 176.92160873413087,
+      "stop": 198.94680725097658,
+      "exit_date": "07-02",
+      "exit_price": 198.94680725097658,
+      "outcome": "LOSS",
+      "pnl": -8.000000000000007,
+      "entry_index": 45,
+      "resolution_index": 59
+    },
+    {
+      "ticker": "HXL",
+      "sector": "Space",
+      "signal": "SHORT",
+      "entry_date": "06-11",
+      "entry_price": 97.36000061035156,
+      "target": 89.35700073242188,
+      "stop": 105.1488006591797,
+      "exit_date": "07-02",
+      "exit_price": 99.30999755859375,
+      "outcome": "ACTIVE",
+      "pnl": -2.002872777339393,
+      "entry_index": 45,
+      "resolution_index": 59
+    },
+    {
+      "ticker": "PL",
+      "sector": "Space",
+      "signal": "BUY",
+      "entry_date": "06-05",
+      "entry_price": 32.220001220703125,
+      "target": 43.72100009918213,
+      "stop": 29.642401123046877,
+      "exit_date": "06-16",
+      "exit_price": 29.642401123046877,
+      "outcome": "LOSS",
+      "pnl": -7.9999999999999964,
+      "entry_index": 41,
+      "resolution_index": 48
+    },
+    {
+      "ticker": "NVDA",
+      "sector": "Quantum",
+      "signal": "BUY",
+      "entry_date": "06-05",
+      "entry_price": 205.10000610351562,
+      "target": 218.8741012573242,
+      "stop": 188.6920056152344,
+      "exit_date": "07-02",
+      "exit_price": 194.8300018310547,
+      "outcome": "ACTIVE",
+      "pnl": -5.007315439706805,
+      "entry_index": 41,
+      "resolution_index": 59
+    },
     {
       "ticker": "ASTC",
       "sector": "Space",
@@ -20,12 +110,12 @@ window.PERFORMANCE_DATA = {
       "entry_price": 40.29999923706055,
       "target": 12.50950005054474,
       "stop": 43.52399917602539,
-      "exit_date": "06-18",
-      "exit_price": 13.649999618530273,
-      "outcome": "ACTIVE",
-      "pnl": 66.1290325634113,
-      "entry_index": 48,
-      "resolution_index": 59
+      "exit_date": "06-22",
+      "exit_price": 12.50950005054474,
+      "outcome": "WIN",
+      "pnl": 68.95905635888748,
+      "entry_index": 39,
+      "resolution_index": 51
     },
     {
       "ticker": "NOC",
@@ -39,8 +129,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 549.8283508300781,
       "outcome": "WIN",
       "pnl": 2.4671207648395477,
-      "entry_index": 47,
-      "resolution_index": 54
+      "entry_index": 38,
+      "resolution_index": 45
     },
     {
       "ticker": "GOOGL",
@@ -50,11 +140,11 @@ window.PERFORMANCE_DATA = {
       "entry_price": 361.6340026855469,
       "target": 389.3804244995117,
       "stop": 332.70328247070313,
-      "exit_date": "06-18",
-      "exit_price": 368.0299987792969,
+      "exit_date": "07-02",
+      "exit_price": 359.9100036621094,
       "outcome": "ACTIVE",
-      "pnl": 1.7686379174116418,
-      "entry_index": 47,
+      "pnl": -0.4767248131079538,
+      "entry_index": 38,
       "resolution_index": 59
     },
     {
@@ -65,12 +155,12 @@ window.PERFORMANCE_DATA = {
       "entry_price": 7.519999980926514,
       "target": 3.3215000152587892,
       "stop": 8.121599979400635,
-      "exit_date": "06-18",
-      "exit_price": 3.559999942779541,
-      "outcome": "ACTIVE",
-      "pnl": 52.65957510892274,
-      "entry_index": 46,
-      "resolution_index": 59
+      "exit_date": "06-22",
+      "exit_price": 3.3215000152587892,
+      "outcome": "WIN",
+      "pnl": 55.831116706338626,
+      "entry_index": 37,
+      "resolution_index": 51
     },
     {
       "ticker": "IONQ",
@@ -84,22 +174,22 @@ window.PERFORMANCE_DATA = {
       "exit_price": 56.69699993133545,
       "outcome": "WIN",
       "pnl": 18.162527525508033,
-      "entry_index": 46,
-      "resolution_index": 52
+      "entry_index": 37,
+      "resolution_index": 43
     },
     {
       "ticker": "QTUM",
       "sector": "Quantum",
       "signal": "SHORT",
       "entry_date": "06-01",
-      "entry_price": 162.8699951171875,
-      "target": 148.0865005493164,
-      "stop": 175.8995947265625,
-      "exit_date": "06-18",
-      "exit_price": 167.97000122070312,
+      "entry_price": 162.60076904296875,
+      "target": 147.8417106628418,
+      "stop": 175.60883056640625,
+      "exit_date": "07-02",
+      "exit_price": 155.00999450683594,
       "outcome": "ACTIVE",
-      "pnl": -3.1313355783219032,
-      "entry_index": 46,
+      "pnl": 4.6683509437319355,
+      "entry_index": 37,
       "resolution_index": 59
     },
     {
@@ -114,8 +204,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 321.6239868164063,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 45,
-      "resolution_index": 47
+      "entry_index": 36,
+      "resolution_index": 38
     },
     {
       "ticker": "HON",
@@ -123,14 +213,14 @@ window.PERFORMANCE_DATA = {
       "signal": "SHORT",
       "entry_date": "05-29",
       "entry_price": 237.86000061035156,
-      "target": 219.481787109375,
+      "target": 219.4531280517578,
       "stop": 256.8888006591797,
       "exit_date": "06-04",
-      "exit_price": 219.481787109375,
+      "exit_price": 219.4531280517578,
       "outcome": "WIN",
-      "pnl": 7.726483416218722,
-      "entry_index": 45,
-      "resolution_index": 49
+      "pnl": 7.738532124510855,
+      "entry_index": 36,
+      "resolution_index": 40
     },
     {
       "ticker": "RDW",
@@ -144,22 +234,22 @@ window.PERFORMANCE_DATA = {
       "exit_price": 13.821000051498412,
       "outcome": "WIN",
       "pnl": 46.63706465227082,
-      "entry_index": 44,
-      "resolution_index": 57
+      "entry_index": 35,
+      "resolution_index": 48
     },
     {
       "ticker": "HEI",
       "sector": "Space",
       "signal": "SHORT",
       "entry_date": "05-28",
-      "entry_price": 345.07000732421875,
-      "target": 293.5919982910156,
-      "stop": 372.67560791015626,
-      "exit_date": "06-18",
-      "exit_price": 337.1000061035156,
+      "entry_price": 344.9440612792969,
+      "target": 293.48484954833987,
+      "stop": 372.53958618164063,
+      "exit_date": "07-02",
+      "exit_price": 362.0899963378906,
       "outcome": "ACTIVE",
-      "pnl": 2.3096766022944193,
-      "entry_index": 44,
+      "pnl": -4.970642194854569,
+      "entry_index": 35,
       "resolution_index": 59
     },
     {
@@ -174,8 +264,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 414.79978942871094,
       "outcome": "WIN",
       "pnl": 2.8549148889820186,
-      "entry_index": 44,
-      "resolution_index": 51
+      "entry_index": 35,
+      "resolution_index": 42
     },
     {
       "ticker": "ASTC",
@@ -189,8 +279,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 14.914800453186036,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 43,
-      "resolution_index": 44
+      "entry_index": 34,
+      "resolution_index": 35
     },
     {
       "ticker": "RKLB",
@@ -204,8 +294,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 107.91199913024903,
       "outcome": "WIN",
       "pnl": 24.642457101970162,
-      "entry_index": 42,
-      "resolution_index": 53
+      "entry_index": 33,
+      "resolution_index": 44
     },
     {
       "ticker": "PL",
@@ -219,8 +309,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 40.077500343322754,
       "outcome": "WIN",
       "pnl": 17.058152739153176,
-      "entry_index": 42,
-      "resolution_index": 50
+      "entry_index": 33,
+      "resolution_index": 41
     },
     {
       "ticker": "VSAT",
@@ -234,8 +324,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 69.21500034332276,
       "outcome": "WIN",
       "pnl": 14.969288641453238,
-      "entry_index": 42,
-      "resolution_index": 50
+      "entry_index": 33,
+      "resolution_index": 41
     },
     {
       "ticker": "LUNR",
@@ -249,8 +339,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 41.32079818725586,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 41,
-      "resolution_index": 44
+      "entry_index": 32,
+      "resolution_index": 35
     },
     {
       "ticker": "SPCE",
@@ -264,8 +354,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 3.499200010299683,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 41,
-      "resolution_index": 42
+      "entry_index": 32,
+      "resolution_index": 33
     },
     {
       "ticker": "SPIR",
@@ -279,8 +369,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 22.85279983520508,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 41,
-      "resolution_index": 42
+      "entry_index": 32,
+      "resolution_index": 33
     },
     {
       "ticker": "SATL",
@@ -294,8 +384,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 7.979750037193298,
       "outcome": "WIN",
       "pnl": 24.79028939297504,
-      "entry_index": 41,
-      "resolution_index": 48
+      "entry_index": 32,
+      "resolution_index": 39
     },
     {
       "ticker": "SIDU",
@@ -309,8 +399,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 5.529599876403809,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 41,
-      "resolution_index": 42
+      "entry_index": 32,
+      "resolution_index": 33
     },
     {
       "ticker": "IRDM",
@@ -320,12 +410,12 @@ window.PERFORMANCE_DATA = {
       "entry_price": 48.6851806640625,
       "target": 41.40583057403565,
       "stop": 52.5799951171875,
-      "exit_date": "06-18",
-      "exit_price": 44.56999969482422,
-      "outcome": "ACTIVE",
-      "pnl": 8.452635716058765,
-      "entry_index": 41,
-      "resolution_index": 59
+      "exit_date": "06-29",
+      "exit_price": 52.5799951171875,
+      "outcome": "LOSS",
+      "pnl": -8.000000000000007,
+      "entry_index": 32,
+      "resolution_index": 56
     },
     {
       "ticker": "GSAT",
@@ -339,8 +429,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 82.03199996948243,
       "outcome": "WIN",
       "pnl": 1.1662650970091226,
-      "entry_index": 41,
-      "resolution_index": 48
+      "entry_index": 32,
+      "resolution_index": 39
     },
     {
       "ticker": "LMT",
@@ -354,8 +444,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 514.1153366088868,
       "outcome": "WIN",
       "pnl": 2.955331424222396,
-      "entry_index": 41,
-      "resolution_index": 47
+      "entry_index": 32,
+      "resolution_index": 38
     },
     {
       "ticker": "IONQ",
@@ -369,8 +459,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 68.73119934082031,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 41,
-      "resolution_index": 44
+      "entry_index": 32,
+      "resolution_index": 35
     },
     {
       "ticker": "QUBT",
@@ -384,23 +474,23 @@ window.PERFORMANCE_DATA = {
       "exit_price": 10.018500089645386,
       "outcome": "WIN",
       "pnl": 18.614949243378376,
-      "entry_index": 41,
-      "resolution_index": 50
+      "entry_index": 32,
+      "resolution_index": 41
     },
     {
       "ticker": "QTUM",
       "sector": "Quantum",
       "signal": "SHORT",
       "entry_date": "05-22",
-      "entry_price": 153.44000244140625,
-      "target": 141.24650115966796,
-      "stop": 165.71520263671877,
+      "entry_price": 153.18637084960938,
+      "target": 141.0130172729492,
+      "stop": 165.44128051757815,
       "exit_date": "06-02",
-      "exit_price": 165.71520263671877,
+      "exit_price": 165.44128051757815,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 41,
-      "resolution_index": 47
+      "entry_index": 32,
+      "resolution_index": 38
     },
     {
       "ticker": "ASTS",
@@ -414,8 +504,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 103.92840362548829,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 40,
-      "resolution_index": 41
+      "entry_index": 31,
+      "resolution_index": 32
     },
     {
       "ticker": "QBTS",
@@ -429,8 +519,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 27.79919975280762,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 40,
-      "resolution_index": 41
+      "entry_index": 31,
+      "resolution_index": 32
     },
     {
       "ticker": "RGTI",
@@ -444,8 +534,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 23.803200988769532,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 40,
-      "resolution_index": 41
+      "entry_index": 31,
+      "resolution_index": 32
     },
     {
       "ticker": "IBM",
@@ -459,8 +549,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 273.20760131835937,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 40,
-      "resolution_index": 45
+      "entry_index": 31,
+      "resolution_index": 36
     },
     {
       "ticker": "HON",
@@ -468,14 +558,14 @@ window.PERFORMANCE_DATA = {
       "signal": "SHORT",
       "entry_date": "05-21",
       "entry_price": 223.8000030517578,
-      "target": 214.22784271240235,
+      "target": 214.18501892089844,
       "stop": 241.70400329589845,
       "exit_date": "06-05",
-      "exit_price": 214.22784271240235,
+      "exit_price": 214.18501892089844,
       "outcome": "WIN",
-      "pnl": 4.277104650951113,
-      "entry_index": 40,
-      "resolution_index": 50
+      "pnl": 4.296239499440812,
+      "entry_index": 31,
+      "resolution_index": 41
     },
     {
       "ticker": "RDW",
@@ -489,8 +579,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 15.951600494384767,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 39,
-      "resolution_index": 41
+      "entry_index": 30,
+      "resolution_index": 32
     },
     {
       "ticker": "HXL",
@@ -504,8 +594,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 91.81378402709962,
       "outcome": "WIN",
       "pnl": 6.984134646456863,
-      "entry_index": 39,
-      "resolution_index": 52
+      "entry_index": 30,
+      "resolution_index": 43
     },
     {
       "ticker": "BA",
@@ -519,23 +609,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 229.27200088500976,
       "outcome": "WIN",
       "pnl": 6.633182988021691,
-      "entry_index": 38,
-      "resolution_index": 45
-    },
-    {
-      "ticker": "NOC",
-      "sector": "Space",
-      "signal": "BUY",
-      "entry_date": "05-18",
-      "entry_price": 547.5899658203125,
-      "target": 563.5840606689453,
-      "stop": 503.78276855468755,
-      "exit_date": "06-18",
-      "exit_price": 521.5,
-      "outcome": "ACTIVE",
-      "pnl": -4.7645076514922335,
-      "entry_index": 37,
-      "resolution_index": 59
+      "entry_index": 29,
+      "resolution_index": 36
     },
     {
       "ticker": "GOOGL",
@@ -549,8 +624,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 375.6436294555664,
       "outcome": "WIN",
       "pnl": 5.30861402954621,
-      "entry_index": 37,
-      "resolution_index": 47
+      "entry_index": 28,
+      "resolution_index": 38
     },
     {
       "ticker": "RKLB",
@@ -564,8 +639,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 134.75159637451173,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 36,
-      "resolution_index": 41
+      "entry_index": 27,
+      "resolution_index": 32
     },
     {
       "ticker": "SPIR",
@@ -579,23 +654,38 @@ window.PERFORMANCE_DATA = {
       "exit_price": 21.610800247192383,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 36,
-      "resolution_index": 42
+      "entry_index": 27,
+      "resolution_index": 33
     },
     {
       "ticker": "QTUM",
       "sector": "Quantum",
       "signal": "SHORT",
       "entry_date": "05-14",
-      "entry_price": 147.8800048828125,
-      "target": 136.41949996948242,
-      "stop": 159.71040527343752,
+      "entry_price": 147.63555908203125,
+      "target": 136.1939956665039,
+      "stop": 159.44640380859377,
       "exit_date": "05-29",
-      "exit_price": 159.71040527343752,
+      "exit_price": 159.44640380859377,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 35,
-      "resolution_index": 45
+      "entry_index": 26,
+      "resolution_index": 36
+    },
+    {
+      "ticker": "NOC",
+      "sector": "Space",
+      "signal": "BUY",
+      "entry_date": "05-13",
+      "entry_price": 549.382080078125,
+      "target": 581.2896331787109,
+      "stop": 505.431513671875,
+      "exit_date": "06-24",
+      "exit_price": 505.431513671875,
+      "outcome": "LOSS",
+      "pnl": -7.9999999999999964,
+      "entry_index": 25,
+      "resolution_index": 53
     },
     {
       "ticker": "QUBT",
@@ -609,8 +699,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 9.519499969482421,
       "outcome": "WIN",
       "pnl": 19.189302332170932,
-      "entry_index": 33,
-      "resolution_index": 38
+      "entry_index": 24,
+      "resolution_index": 29
     },
     {
       "ticker": "LUNR",
@@ -624,8 +714,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 35.01359802246094,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 32,
-      "resolution_index": 34
+      "entry_index": 23,
+      "resolution_index": 25
     },
     {
       "ticker": "PL",
@@ -639,8 +729,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 45.18720016479492,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 32,
-      "resolution_index": 42
+      "entry_index": 23,
+      "resolution_index": 33
     },
     {
       "ticker": "RDW",
@@ -654,8 +744,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 13.132799835205079,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 32,
-      "resolution_index": 35
+      "entry_index": 23,
+      "resolution_index": 26
     },
     {
       "ticker": "SATL",
@@ -669,98 +759,8 @@ window.PERFORMANCE_DATA = {
       "exit_price": 9.395999794006348,
       "outcome": "LOSS",
       "pnl": -8.000000000000007,
-      "entry_index": 32,
-      "resolution_index": 36
-    },
-    {
-      "ticker": "NOC",
-      "sector": "Space",
-      "signal": "BUY",
-      "entry_date": "05-11",
-      "entry_price": 545.8078002929688,
-      "target": 593.666162109375,
-      "stop": 502.1431762695313,
-      "exit_date": "06-18",
-      "exit_price": 521.5,
-      "outcome": "ACTIVE",
-      "pnl": -4.453545786615953,
-      "entry_index": 32,
-      "resolution_index": 59
-    },
-    {
-      "ticker": "GOOGL",
-      "sector": "Quantum",
-      "signal": "SHORT",
-      "entry_date": "05-11",
-      "entry_price": 388.40802001953125,
-      "target": 360.6720703125,
-      "stop": 419.48066162109376,
-      "exit_date": "06-03",
-      "exit_price": 360.6720703125,
-      "outcome": "WIN",
-      "pnl": 7.140931257196115,
-      "entry_index": 32,
-      "resolution_index": 48
-    },
-    {
-      "ticker": "NVDA",
-      "sector": "Quantum",
-      "signal": "SHORT",
-      "entry_date": "05-11",
-      "entry_price": 219.18453979492188,
-      "target": 204.44971466064453,
-      "stop": 236.71930297851563,
-      "exit_date": "06-10",
-      "exit_price": 204.44971466064453,
-      "outcome": "WIN",
-      "pnl": 6.722565901803046,
-      "entry_index": 32,
-      "resolution_index": 53
-    },
-    {
-      "ticker": "RKLB",
-      "sector": "Space",
-      "signal": "SHORT",
-      "entry_date": "05-08",
-      "entry_price": 105.47000122070312,
-      "target": 82.07900009155273,
-      "stop": 113.90760131835938,
-      "exit_date": "05-11",
-      "exit_price": 113.90760131835938,
-      "outcome": "LOSS",
-      "pnl": -8.000000000000007,
-      "entry_index": 31,
-      "resolution_index": 32
-    },
-    {
-      "ticker": "VSAT",
-      "sector": "Space",
-      "signal": "SHORT",
-      "entry_date": "05-08",
-      "entry_price": 70.01000213623047,
-      "target": 62.59250068664551,
-      "stop": 75.6108023071289,
-      "exit_date": "05-26",
-      "exit_price": 75.6108023071289,
-      "outcome": "LOSS",
-      "pnl": -8.000000000000007,
-      "entry_index": 31,
-      "resolution_index": 42
-    },
-    {
-      "ticker": "LMT",
-      "sector": "Space",
-      "signal": "BUY",
-      "entry_date": "05-08",
-      "entry_price": 503.2156982421875,
-      "target": 542.468717956543,
-      "stop": 462.9584423828125,
-      "exit_date": "06-11",
-      "exit_price": 542.468717956543,
-      "outcome": "WIN",
-      "pnl": 7.800436244630782,
-      "entry_index": 31,
-      "resolution_index": 54
+      "entry_index": 23,
+      "resolution_index": 27
     }
   ]
 };
