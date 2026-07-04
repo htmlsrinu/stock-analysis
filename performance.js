@@ -2,14 +2,14 @@ window.PERFORMANCE_DATA = {
   "summary": {
     "totalTrades": 82,
     "closedTrades": 73,
-    "wins": 31,
-    "losses": 42,
-    "winRate": 42.5,
-    "avgReturn": 1.71,
+    "wins": 30,
+    "losses": 43,
+    "winRate": 41.1,
+    "avgReturn": 1.56,
     "startingCapital": 100000.0,
-    "endingCapital": 114010.64,
-    "netProfitDollars": 14010.64,
-    "netReturnPct": 14.01
+    "endingCapital": 112789.95,
+    "netProfitDollars": 12789.95,
+    "netReturnPct": 12.79
   },
   "trades": [
     {
@@ -33,12 +33,12 @@ window.PERFORMANCE_DATA = {
       "signal": "SHORT",
       "entry_date": "06-11",
       "entry_price": 548.6799926757812,
-      "target": 523.6308197021484,
+      "target": 525.5175048828125,
       "stop": 592.5743920898437,
       "exit_date": "06-18",
-      "exit_price": 523.6308197021484,
+      "exit_price": 525.5175048828125,
       "outcome": "WIN",
-      "pnl": 4.565351991690825,
+      "pnl": 4.221493056455506,
       "entry_index": 45,
       "resolution_index": 50
     },
@@ -118,21 +118,6 @@ window.PERFORMANCE_DATA = {
       "resolution_index": 51
     },
     {
-      "ticker": "NOC",
-      "sector": "Space",
-      "signal": "BUY",
-      "entry_date": "06-02",
-      "entry_price": 536.5900268554688,
-      "target": 549.8283508300781,
-      "stop": 493.6628247070313,
-      "exit_date": "06-11",
-      "exit_price": 549.8283508300781,
-      "outcome": "WIN",
-      "pnl": 2.4671207648395477,
-      "entry_index": 38,
-      "resolution_index": 45
-    },
-    {
       "ticker": "GOOGL",
       "sector": "Quantum",
       "signal": "BUY",
@@ -161,6 +146,21 @@ window.PERFORMANCE_DATA = {
       "pnl": 55.831116706338626,
       "entry_index": 37,
       "resolution_index": 51
+    },
+    {
+      "ticker": "NOC",
+      "sector": "Space",
+      "signal": "BUY",
+      "entry_date": "06-01",
+      "entry_price": 539.219970703125,
+      "target": 553.5320007324219,
+      "stop": 496.08237304687503,
+      "exit_date": "06-29",
+      "exit_price": 496.08237304687503,
+      "outcome": "LOSS",
+      "pnl": -7.9999999999999964,
+      "entry_index": 37,
+      "resolution_index": 56
     },
     {
       "ticker": "IONQ",
@@ -437,15 +437,15 @@ window.PERFORMANCE_DATA = {
       "sector": "Space",
       "signal": "SHORT",
       "entry_date": "05-22",
-      "entry_price": 529.7718505859375,
-      "target": 514.1153366088868,
-      "stop": 572.1535986328125,
-      "exit_date": "06-02",
-      "exit_price": 514.1153366088868,
+      "entry_price": 533.239990234375,
+      "target": 517.4809967041016,
+      "stop": 575.899189453125,
+      "exit_date": "06-01",
+      "exit_price": 517.4809967041016,
       "outcome": "WIN",
-      "pnl": 2.955331424222396,
+      "pnl": 2.955328523531564,
       "entry_index": 32,
-      "resolution_index": 38
+      "resolution_index": 37
     },
     {
       "ticker": "IONQ",
@@ -677,15 +677,15 @@ window.PERFORMANCE_DATA = {
       "sector": "Space",
       "signal": "BUY",
       "entry_date": "05-13",
-      "entry_price": 549.382080078125,
-      "target": 581.2896331787109,
-      "stop": 505.431513671875,
-      "exit_date": "06-24",
-      "exit_price": 505.431513671875,
+      "entry_price": 551.7999877929688,
+      "target": 583.847998046875,
+      "stop": 507.6559887695313,
+      "exit_date": "06-22",
+      "exit_price": 507.6559887695313,
       "outcome": "LOSS",
       "pnl": -7.9999999999999964,
       "entry_index": 25,
-      "resolution_index": 53
+      "resolution_index": 51
     },
     {
       "ticker": "QUBT",
